@@ -11,10 +11,14 @@ public class playerAnimation : MonoBehaviour
 
     private playerAttribution attribution;
 
-    void Start()
+    private playerController playerController;
+   
+    private void Awake()
     {
-        anim=GetComponent<Animator>();
-        rb=GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        attribution = GetComponent<playerAttribution>();
+        playerController = GetComponent<playerController>();
     }
 
     // Update is called once per frame
