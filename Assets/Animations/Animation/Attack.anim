@@ -98,6 +98,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: bone_1/bone_7/bone_8
+<<<<<<< HEAD
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -123,6 +124,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: bone_1/bone_3/bone_4
+=======
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -138,9 +141,15 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
+<<<<<<< HEAD
         value: {x: 1.4193959, y: -0.65761214, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
+=======
+        value: {x: 0.6786924, y: 0.16597576, z: 0}
+        inSlope: {x: -2.6080751, y: 0, z: 0}
+        outSlope: {x: -2.6080751, y: 0, z: 0}
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -172,7 +181,11 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
+<<<<<<< HEAD
         value: {x: 0.39133123, y: 0.23706642, z: 0}
+=======
+        value: {x: 0.09220471, y: 0.005159848, z: 0}
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -349,6 +362,7 @@ AnimationClip:
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+<<<<<<< HEAD
     - serializedVersion: 2
       path: 1523279566
       attribute: 4
@@ -358,6 +372,8 @@ AnimationClip:
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+=======
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -395,9 +411,15 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
+<<<<<<< HEAD
         value: 1.4193959
         inSlope: 0
         outSlope: 0
+=======
+        value: 0.6786924
+        inSlope: -2.6080751
+        outSlope: -2.6080751
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -434,7 +456,11 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
+<<<<<<< HEAD
         value: -0.65761214
+=======
+        value: 0.16597576
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -629,7 +655,11 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
+<<<<<<< HEAD
         value: 0.39133123
+=======
+        value: 0.09220471
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -668,7 +698,11 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
+<<<<<<< HEAD
         value: 0.23706642
+=======
+        value: 0.005159848
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1181,6 +1215,7 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
     flags: 0
+<<<<<<< HEAD
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -1271,6 +1306,8 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
     flags: 16
+=======
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
   m_EulerEditorCurves:
   - serializedVersion: 2
     curve:
@@ -1380,6 +1417,7 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
     flags: 0
+<<<<<<< HEAD
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -1416,6 +1454,8 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
     flags: 0
+=======
+>>>>>>> 28bff16097065cfa36236ba6f81dd50c35344649
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
