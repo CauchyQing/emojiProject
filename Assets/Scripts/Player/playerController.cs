@@ -9,21 +9,26 @@ public class playerController : MonoBehaviour
     private Rigidbody2D rb;
     private playerAttribution playerAttribution;
     public PlayerInputSystem inputControl;
+    public playerAnimation playerAnimation;
     public Vector2 inputDirection;
     
     [Header("基本参数")]
     public float speed;
     public float jumpForce;
+    public bool isNormalAttack;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerAttribution = GetComponent<playerAttribution>();  
         inputControl=new PlayerInputSystem();
-
+        playerAnimation=GetComponent<playerAnimation>();
         inputControl.GamePlay.Jump.started += Jump;
+
+        inputControl.GamePlay.Fire.started += NormalAttack;
+
     }
 
-    
+   
 
     private void OnEnable()
     {
@@ -62,6 +67,14 @@ public class playerController : MonoBehaviour
         if(playerAttribution.isGround)
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse); 
     }
+
+
+    private void NormalAttack(InputAction.CallbackContext obj)
+    {
+        isNormalAttack= true;
+        playerAnimation.PlayerNormalAttack();
+    }
+
 
     // Start is called before the first frame update
     void Start()
