@@ -17,8 +17,8 @@ MonoBehaviour:
     m_Hash: 623301721
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: New Label
-      m_Hash: 259326342
+    - m_Name: tasty
+      m_Hash: 1037533719
       m_Sprite: {fileID: 6435770992328516628, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 6435770992328516628, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
@@ -45,6 +45,38 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 2
+  - m_Name: RShoe
+    m_Hash: 70300637
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sneaker
+      m_Hash: 39434378
+      m_Sprite: {fileID: 0}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 0}
+    - m_Name: leather
+      m_Hash: 688462682
+      m_Sprite: {fileID: 0}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 0}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: LShoe
+    m_Hash: 467704382
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sneaker
+      m_Hash: 39434378
+      m_Sprite: {fileID: 3121086227422584395, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3121086227422584395, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
+    - m_Name: leather
+      m_Hash: 688462682
+      m_Sprite: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638168423675902799
+  m_ModificationHash: 638173646854112689
   m_Version: 1
