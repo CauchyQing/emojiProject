@@ -32,7 +32,14 @@ public class playerAnimation : MonoBehaviour
         anim.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("velocityY", rb.velocity.y);
         anim.SetBool("isGround",attribution.isGround);
+        anim.SetBool("isNormalAttack", playerController.isNormalAttack);
     }
+
+    public void PlayerNormalAttack()
+    {
+        anim.SetTrigger("normalAttack");
+    }
+    
 
 
 }
