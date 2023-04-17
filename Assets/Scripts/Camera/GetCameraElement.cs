@@ -15,7 +15,7 @@ public class GetCameraElement : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
-            cinemachineTargetGroup.AddMember(player.transform, 1, 1);
+            cinemachineTargetGroup.AddMember(player.transform, 1, 0.5f);
         }
     }
 }
