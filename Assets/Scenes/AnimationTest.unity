@@ -143,7 +143,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 795798674
+  m_SpriteHash: 767346083
 --- !u!4 &568711500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7221020487405985688, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 450679595
+  m_SpriteHash: 130690827
 --- !u!1001 &975217349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,10 +242,30 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - target: {fileID: -4648084605813163107, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_BoneTransforms.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4648084605813163107, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1153552541}
+    - target: {fileID: -1621988687639570432, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9166667
+      objectReference: {fileID: 0}
+    - target: {fileID: -1621988687639570432, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_Size.y
+      value: 0.53333336
+      objectReference: {fileID: 0}
     - target: {fileID: -1621988687639570432, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8720642767821748557, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - target: {fileID: -1621988687639570432, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3129871107659670141, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_BoneTransforms.Array.size
       value: 1
@@ -261,11 +281,11 @@ PrefabInstance:
     - target: {fileID: 6302769882361336929, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3179376164832498515, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
+      objectReference: {fileID: 6435770992328516628, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     - target: {fileID: 6763798748730720299, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      objectReference: {fileID: -5643742331091115042, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -276,6 +296,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       insertIndex: -1
       addedObject: {fileID: 975217352}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 975217353}
     - targetCorrespondingSourceObject: {fileID: -7388962429686889214, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       insertIndex: -1
       addedObject: {fileID: 323354623}
@@ -331,22 +354,32 @@ MonoBehaviour:
   - m_Name: RShoe
     m_Hash: 0
     m_CategoryList:
-    - m_Name: Entry
+    - m_Name: sneaker
       m_Hash: 0
       m_Sprite: {fileID: -205570085370179118, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
-    - m_Name: Entry_0
+    - m_Name: leather
       m_Hash: 0
       m_Sprite: {fileID: -8720642767821748557, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
-  - m_Name: LShoe
-    m_Hash: 0
-    m_CategoryList:
-    - m_Name: Entry
-      m_Hash: 0
-      m_Sprite: {fileID: 3121086227422584395, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
-    - m_Name: Entry_0
-      m_Hash: 0
-      m_Sprite: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
   m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 9f5eee5f9a26d774b8c0c59644b5ef73, type: 3}
+--- !u!114 &975217353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975217350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca517b5ab82f4ff48adfdb7f877de0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FaceLabels:
+  - tasty
+  - heh
+  ShoeLabels:
+  - sneaker
+  - leather
+  spriteLibrary: {fileID: 0}
 --- !u!1 &1054412475
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +516,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1153552541 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8162383718071358416, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+  m_PrefabInstance: {fileID: 975217349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449856104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3234415236289210698, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
@@ -503,7 +541,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 339573057
+  m_SpriteHash: 153847137
 --- !u!4 &1618703178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2114717017327982363, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
@@ -529,4 +567,4 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 921314687
+  m_SpriteHash: 612993588
