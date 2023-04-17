@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class VoidEventSO : MonoBehaviour
+[CreateAssetMenu(menuName = "Event/VoidEventSO")]
+
+public class VoidEventSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public UnityAction OnEventRaised;
 
-    // Update is called once per frame
-    void Update()
+    public void RaiseEvent()
     {
-        
+        OnEventRaised?.Invoke();
     }
 }
