@@ -77,16 +77,16 @@ public class ArmourController : MonoBehaviour
         RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
     }
 
-    float t = 0f;
-    private void Update()
-    {
-        t += Time.deltaTime;
-        if (t > 2.0f)
-        {
-            NextFace();
-            NextShoe();
-            t = 0f;
-        }
-    }
+    //float t = 0f;
+    //private void Update()
+    //{
+    //    t += Time.deltaTime;
+    //    if (t > 2.0f)
+    //    {
+    //        NextFace();
+    //        NextShoe();
+    //        t = 0f;
+    //    }
+    //}
 
 }
