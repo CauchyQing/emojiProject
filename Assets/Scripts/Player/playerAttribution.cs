@@ -12,8 +12,8 @@ public class playerAttribution : MonoBehaviour
 
 
 
-    public UnityEvent<playerAttribution> OnOddsChange;  //受伤改变击飞概率
-    public UnityEvent<Transform> OnTakeDamage;  //受伤动画
+    public UnityEvent<playerAttribution> OnAttack;  //攻击事件
+    public UnityEvent<Transform> OnTakeDamage;  //受伤改变击飞概率
     public UnityEvent Ondie;
 
 
@@ -47,7 +47,7 @@ public class playerAttribution : MonoBehaviour
     public void TakeDamage(Attack attacker)
     {
         currentOdds += attacker.damage;
-        OnOddsChange?.Invoke(this);
+        
         OnTakeDamage?.Invoke(attacker.transform);
     }
 

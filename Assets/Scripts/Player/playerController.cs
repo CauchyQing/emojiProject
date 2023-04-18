@@ -73,6 +73,7 @@ public class playerController : MonoBehaviour
     {
         isNormalAttack= true;
         playerAnimation.PlayerNormalAttack();
+        playerAttribution.OnAttack?.Invoke(playerAttribution);
     }
 
 
