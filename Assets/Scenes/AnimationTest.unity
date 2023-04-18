@@ -143,7 +143,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 767346083
+  m_SpriteHash: 795798674
 --- !u!4 &568711500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7221020487405985688, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
@@ -238,6 +238,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.48741406
+      objectReference: {fileID: 0}
+    - target: {fileID: -7221020487405985688, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.014158368
+      objectReference: {fileID: 0}
     - target: {fileID: -7193929806420029068, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -285,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 6763798748730720299, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5643742331091115042, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
+      objectReference: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
