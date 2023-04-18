@@ -62,6 +62,15 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Accumulate"",
+                    ""type"": ""Button"",
+                    ""id"": ""4b076860-cd4a-4a7a-9570-f2ab82d8151c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -293,6 +302,17 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33c7117b-4939-4fef-9f74-ec3e58476c30"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": ""Press(pressPoint=0.5,behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accumulate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -884,6 +904,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         m_GamePlay_Look = m_GamePlay.FindAction("Look", throwIfNotFound: true);
         m_GamePlay_Fire = m_GamePlay.FindAction("Fire", throwIfNotFound: true);
         m_GamePlay_Jump = m_GamePlay.FindAction("Jump", throwIfNotFound: true);
+        m_GamePlay_Accumulate = m_GamePlay.FindAction("Accumulate", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -961,6 +982,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_GamePlay_Look;
     private readonly InputAction m_GamePlay_Fire;
     private readonly InputAction m_GamePlay_Jump;
+    private readonly InputAction m_GamePlay_Accumulate;
     public struct GamePlayActions
     {
         private @PlayerInputSystem m_Wrapper;
@@ -969,6 +991,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_GamePlay_Look;
         public InputAction @Fire => m_Wrapper.m_GamePlay_Fire;
         public InputAction @Jump => m_Wrapper.m_GamePlay_Jump;
+        public InputAction @Accumulate => m_Wrapper.m_GamePlay_Accumulate;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -990,6 +1013,9 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Accumulate.started += instance.OnAccumulate;
+            @Accumulate.performed += instance.OnAccumulate;
+            @Accumulate.canceled += instance.OnAccumulate;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -1006,6 +1032,9 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Accumulate.started -= instance.OnAccumulate;
+            @Accumulate.performed -= instance.OnAccumulate;
+            @Accumulate.canceled -= instance.OnAccumulate;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -1192,6 +1221,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnAccumulate(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -9,9 +9,6 @@ public class playerAttribution : MonoBehaviour
     public float strikeOdds;    //初始击飞概率
     public float currentOdds;   //当前击飞概率
 
-
-
-
     public UnityEvent<playerAttribution> OnAttack;  //攻击事件
     public UnityEvent<Transform> OnTakeDamage;  //受伤改变击飞概率
     public UnityEvent Ondie;

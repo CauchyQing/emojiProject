@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Accumulate",
+                    "type": "Button",
+                    "id": "4b076860-cd4a-4a7a-9570-f2ab82d8151c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -271,6 +280,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33c7117b-4939-4fef-9f74-ec3e58476c30",
+                    "path": "<Keyboard>/k",
+                    "interactions": "Press(pressPoint=0.5,behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Accumulate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
