@@ -27,8 +27,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 3179376164832498515, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 3179376164832498515, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
+    - m_Name: angel
+      m_Hash: 681527012
+      m_Sprite: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: Weapon
     m_Hash: 782213840
     m_CategoryList: []
@@ -43,24 +48,34 @@ MonoBehaviour:
       m_Sprite: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - m_Name: hammer
+      m_Hash: 519408182
+      m_Sprite: {fileID: -6123411452117580177, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6123411452117580177, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: RShoe
     m_Hash: 70300637
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: sneaker
       m_Hash: 39434378
-      m_Sprite: {fileID: 0}
+      m_Sprite: {fileID: -205570085370179118, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 0}
+      m_SpriteOverride: {fileID: -205570085370179118, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
     - m_Name: leather
       m_Hash: 688462682
-      m_Sprite: {fileID: 0}
+      m_Sprite: {fileID: -8720642767821748557, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 0}
+      m_SpriteOverride: {fileID: -8720642767821748557, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - m_Name: climbing
+      m_Hash: 126406203
+      m_Sprite: {fileID: 8948210964320834215, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8948210964320834215, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   - m_Name: LShoe
     m_Hash: 467704382
     m_CategoryList: []
@@ -75,8 +90,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - m_Name: climbing
+      m_Hash: 126406203
+      m_Sprite: {fileID: 1562685587428151098, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1562685587428151098, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 2
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638174475128075958
+  m_ModificationHash: 638174503304535335
   m_Version: 1
