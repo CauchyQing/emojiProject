@@ -239,6 +239,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0ab277a668d4f49a85ac5f4d1300ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strikeOdds: 0
+  currentOdds: 0
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  Ondie:
+    m_PersistentCalls:
+      m_Calls: []
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
@@ -1056,9 +1067,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -2.1664333, y: 10.265483}
-      - {x: -20.179876, y: 9.853617}
+      - {x: -20.253122, y: 10.073357}
       - {x: -20.139462, y: -10.272606}
-      - {x: 20.617908, y: -10.877593}
+      - {x: 20.691154, y: -10.438115}
       - {x: 20.743128, y: 9.901496}
   m_UseDelaunayMesh: 0
 --- !u!4 &620530536
@@ -1325,12 +1336,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8340397261651038937, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_BoneTransforms.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8340397261651038937, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_BoneTransforms.Array.data[0]
       value: 
       objectReference: {fileID: 1156413126}
+    - target: {fileID: -8340397261651038937, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1382,7 +1397,7 @@ PrefabInstance:
     - target: {fileID: -7193929806420029068, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3121086227422584395, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
+      objectReference: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1624,7 +1639,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 748326107
+  m_SpriteHash: 130690827
 --- !u!1 &2116803521 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
@@ -1671,6 +1686,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0ab277a668d4f49a85ac5f4d1300ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strikeOdds: 0
+  currentOdds: 0
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  Ondie:
+    m_PersistentCalls:
+      m_Calls: []
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
