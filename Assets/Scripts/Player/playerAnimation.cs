@@ -33,6 +33,7 @@ public class playerAnimation : MonoBehaviour
         anim.SetFloat("velocityY", rb.velocity.y);
         anim.SetBool("isGround",attribution.isGround);
         anim.SetBool("isNormalAttack", playerController.isNormalAttack);
+        anim.SetBool("isAccumulateAttack", playerController.isAccumulate);
     }
 
     public void PlayerNormalAttack()
@@ -40,6 +41,14 @@ public class playerAnimation : MonoBehaviour
         anim.SetTrigger("normalAttack");
     }
     
+    public void PlayerAccumulate()
+    {
+        anim.SetTrigger("accumulate");
+    }
 
+    public void PlayHurt()
+    {
+        anim.SetTrigger("hurt");
+    }
 
 }

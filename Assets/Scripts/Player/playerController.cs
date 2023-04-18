@@ -16,6 +16,7 @@ public class playerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     public bool isNormalAttack;
+    public bool isAccumulate;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +26,8 @@ public class playerController : MonoBehaviour
         inputControl.GamePlay.Jump.started += Jump;
 
         inputControl.GamePlay.Fire.started += NormalAttack;
-
+        inputControl.GamePlay.Accumulate.started += AccumulateAttack;
+        inputControl.GamePlay.Accumulate.canceled += AccumulateFinish;
     }
 
 
@@ -76,7 +78,19 @@ public class playerController : MonoBehaviour
         playerAttribution.OnAttack?.Invoke(playerAttribution);
     }
 
-
+    private void AccumulateAttack(InputAction.CallbackContext obj)
+    {
+        isAccumulate = true;
+       // playerAnimation.PlayerAccumulate();
+        
+    }
+    private void AccumulateFinish(InputAction.CallbackContext obj)
+    {
+        
+        playerAnimation.PlayerAccumulate();
+        playerAttribution.OnAttack?.Invoke(playerAttribution);
+        isAccumulate = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
