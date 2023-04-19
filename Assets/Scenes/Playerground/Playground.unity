@@ -227,6 +227,7 @@ MonoBehaviour:
   speed: 300
   jumpForce: 20
   isNormalAttack: 0
+  isAccumulate: 0
 --- !u!114 &288587752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,10 +244,34 @@ MonoBehaviour:
   currentOdds: 0
   OnAttack:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTakeDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Ondie:
     m_PersistentCalls:
       m_Calls: []
@@ -1674,6 +1699,7 @@ MonoBehaviour:
   speed: 300
   jumpForce: 20
   isNormalAttack: 0
+  isAccumulate: 0
 --- !u!114 &2116803524
 MonoBehaviour:
   m_ObjectHideFlags: 0
