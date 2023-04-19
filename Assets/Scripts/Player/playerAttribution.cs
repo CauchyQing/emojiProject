@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering.UI;
 
 public class playerAttribution : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class playerAttribution : MonoBehaviour
 
     public void TakeDamage(Attack attacker)
     {
+        Debug.Log("sss");
         currentOdds += attacker.damage;
         anim.PlayHurt();
         OnTakeDamage?.Invoke(attacker.transform);
