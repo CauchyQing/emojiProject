@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
+  - MovingPlatform
   - Ground
-  - 
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: MovingPlatform
+    uniqueID: 4241247269
+    locked: 0
+  - name: Ground
+    uniqueID: 279240211
+    locked: 0
+  - name: 
+    uniqueID: 2812839705
     locked: 0
