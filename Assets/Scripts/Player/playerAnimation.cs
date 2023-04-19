@@ -46,5 +46,9 @@ public class playerAnimation : MonoBehaviour
         anim.SetTrigger("accumulate");
     }
 
+    public void PlayerHurt()
+    {
+        anim.SetTrigger("hurt");
+    }
 
 }

@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering.UI;
 
 public class playerAttribution : MonoBehaviour
 {
+
+    private playerAnimation anim;
     [Header("基本属性")]
     public float strikeOdds;    //初始击飞概率
     public float currentOdds;   //当前击飞概率
@@ -39,12 +42,14 @@ public class playerAttribution : MonoBehaviour
     private void Start()
     {
         currentOdds = strikeOdds;
+        anim= GetComponent<playerAnimation>();
     }
 
     public void TakeDamage(Attack attacker)
     {
+        Debug.Log("sss");
         currentOdds += attacker.damage;
-        
+        anim.PlayerHurt();
         OnTakeDamage?.Invoke(attacker.transform);
     }
 
