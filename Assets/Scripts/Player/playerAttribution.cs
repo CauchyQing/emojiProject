@@ -21,7 +21,9 @@ public class playerAttribution : MonoBehaviour
     public float checkRaduis;
     public Vector2 bottomOffset;
     public LayerMask groundLayer;
+    public LayerMask platformLayer;//平台检测层
     public bool isGround;
+    public bool isPlatform;//判断是否在平台
 
 
     private void Update()
@@ -31,6 +33,7 @@ public class playerAttribution : MonoBehaviour
     public void Check()
     {
         isGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, groundLayer);
+        isPlatform = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, platformLayer);
 
     }
 
@@ -49,7 +52,7 @@ public class playerAttribution : MonoBehaviour
     {
         Debug.Log("sss");
         currentOdds += attacker.damage;
-        anim.PlayHurt();
+        anim.PlayerHurt();
         OnTakeDamage?.Invoke(attacker.transform);
     }
 

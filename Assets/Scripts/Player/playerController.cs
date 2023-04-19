@@ -17,6 +17,7 @@ public class playerController : MonoBehaviour
     public float jumpForce;
     public bool isNormalAttack;
     public bool isAccumulate;
+    public float recoveryTime;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +25,7 @@ public class playerController : MonoBehaviour
         inputControl = new PlayerInputSystem();
         playerAnimation = GetComponent<playerAnimation>();
         inputControl.GamePlay.Jump.started += Jump;
+        inputControl.GamePlay.Down.started += Down;//
 
         inputControl.GamePlay.Fire.started += NormalAttack;
         inputControl.GamePlay.Accumulate.started += AccumulateAttack;
@@ -69,6 +71,22 @@ public class playerController : MonoBehaviour
         if (playerAttribution.isGround)
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
+    private void Down(InputAction.CallbackContext obj)
+    {
+  
+        if (playerAttribution.isPlatform)
+        {
+            gameObject.layer = LayerMask.NameToLayer("MovingPlatform");
+            Invoke("Recovery", recoveryTime);
+        }
+    }
+    private void Recovery()
+    {
+
+
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
+    }
 
 
     private void NormalAttack(InputAction.CallbackContext obj)
@@ -91,6 +109,7 @@ public class playerController : MonoBehaviour
         playerAttribution.OnAttack?.Invoke(playerAttribution);
         isAccumulate = false;
     }
+    
     // Start is called before the first frame update
     void Start()
     {
