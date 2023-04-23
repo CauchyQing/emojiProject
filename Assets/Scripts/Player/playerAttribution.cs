@@ -54,7 +54,7 @@ public class playerAttribution : MonoBehaviour
     {
         currentOdds += attacker.damage;
         
-        rb.AddForce()
+        //rb.AddForce()
         anim.PlayerHurt();
         OnTakeDamage?.Invoke(attacker.transform);
     }
