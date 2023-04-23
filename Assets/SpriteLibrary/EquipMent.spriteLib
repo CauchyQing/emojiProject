@@ -55,9 +55,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -6123411452117580177, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
     - m_Name: empty
       m_Hash: 684146116
-      m_Sprite: {fileID: 21300000, guid: f3324fb8f99a2714aba6032e5272d940, type: 3}
+      m_Sprite: {fileID: 9028723739412666752, guid: b6d543bd6aa8252498ade803922c835c, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 21300000, guid: f3324fb8f99a2714aba6032e5272d940, type: 3}
+      m_SpriteOverride: {fileID: 9028723739412666752, guid: b6d543bd6aa8252498ade803922c835c, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
   - m_Name: RShoe
@@ -135,5 +135,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638178807168276315
+  m_ModificationHash: 638178840677183273
   m_Version: 1

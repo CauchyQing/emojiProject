@@ -2939,6 +2939,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1712650974768547501, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - target: {fileID: 1712650974768547501, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885538103941810702, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_SpriteHash
+      value: 334069828
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304845488696462168, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_SpriteHash
+      value: 795798674
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527040187467622397, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -715265748140342274, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     - target: {fileID: 5620094325498275643, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_Name
       value: Emoji-Character
@@ -2986,6 +3006,18 @@ PrefabInstance:
     - target: {fileID: 6716714051726491480, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115908240723709837, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3337457817749617921, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    - target: {fileID: 7196787824306238943, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: PlayerWeapon
+      value: sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295616888194385830, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_SpriteHash
+      value: 713961759
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
