@@ -53,8 +53,12 @@ public class playerAttribution : MonoBehaviour
     public void TakeDamage(Attack attacker)
     {
         currentOdds += attacker.damage;
-        
-        //rb.AddForce()
+
+        rb.AddForce(transform.up*attacker.attackForce, ForceMode2D.Impulse);
+        if(attacker.tf.position.x<transform.position.x)
+            rb.AddForce(transform.right * attacker.attackForce, ForceMode2D.Impulse);
+       // else
+           // rb.AddForce(transform.left * attacker.attackForce, ForceMode2D.Impulse);
         anim.PlayerHurt();
         OnTakeDamage?.Invoke(attacker.transform);
     }

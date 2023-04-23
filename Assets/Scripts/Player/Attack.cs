@@ -8,6 +8,9 @@ public class Attack : MonoBehaviour
     public float attackRange;
     public float attackRate; //¹¥»÷ÆµÂÊ
 
+    public float attackTime;
+    public float attackForce;
+    public Transform tf;
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -23,7 +26,7 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        tf=GetComponent<Transform>();
     }
 
     // Update is called once per frame
