@@ -53,8 +53,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -6123411452117580177, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -6123411452117580177, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+    - m_Name: empty
+      m_Hash: 684146116
+      m_Sprite: {fileID: 21300000, guid: f3324fb8f99a2714aba6032e5272d940, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f3324fb8f99a2714aba6032e5272d940, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 4
   - m_Name: RShoe
     m_Hash: 70300637
     m_CategoryList: []
@@ -97,6 +102,38 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 1562685587428151098, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: LHand
+    m_Hash: 1026912504
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: riot
+      m_Hash: 309954025
+      m_Sprite: {fileID: 731069362087649945, guid: 51ba176c9b3f71b4a8e08212e6cb0fde, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 731069362087649945, guid: 51ba176c9b3f71b4a8e08212e6cb0fde, type: 3}
+    - m_Name: hand
+      m_Hash: 660750991
+      m_Sprite: {fileID: -3337457817749617921, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3337457817749617921, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: RHand
+    m_Hash: 585455899
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: riot
+      m_Hash: 309954025
+      m_Sprite: {fileID: 731069362087649945, guid: 51ba176c9b3f71b4a8e08212e6cb0fde, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 731069362087649945, guid: 51ba176c9b3f71b4a8e08212e6cb0fde, type: 3}
+    - m_Name: hand
+      m_Hash: 660750991
+      m_Sprite: {fileID: -715265748140342274, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -715265748140342274, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638174503304535335
+  m_ModificationHash: 638178807168276315
   m_Version: 1
