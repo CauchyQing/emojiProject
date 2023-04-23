@@ -29,20 +29,19 @@ public class ArmourController : MonoBehaviour
 
     [HideInInspector]
     public SpriteLibrary spriteLibrary;
-    [HideInInspector]
-    public string PlayerWeapon = "empty";//角色当前手持的武器
+  
+    public string PlayerWeapon = "weapon";//角色当前手持的武器
 
     private playerController playerController;
 
     public Animator animator;
     public AnimatorOverrideController overrideController;
-    private RuntimeAnimatorController originalContorller;
+    public RuntimeAnimatorController originalContorller;
 
     private void Start()
     {
         spriteLibrary = GetComponent<SpriteLibrary>();
         playerController = GetComponent<playerController>();
-        originalContorller = animator.runtimeAnimatorController;
         foreach (var resolver in FindObjectsOfType<SpriteResolver>())
         {
             var category = resolver.GetCategory();
@@ -100,7 +99,7 @@ public class ArmourController : MonoBehaviour
     {
         if (PlayerWeapon == "empty" && playerController.isNormalAttack)
         {
-            originalContorller = animator.runtimeAnimatorController;
+            //originalContorller = animator.runtimeAnimatorController;
             animator.runtimeAnimatorController = overrideController;
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "riot");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "riot");
