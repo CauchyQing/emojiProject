@@ -99,7 +99,7 @@ public class playerController : MonoBehaviour
     private void AccumulateAttack(InputAction.CallbackContext obj)
     {
         isAccumulate = true;
-       // playerAnimation.PlayerAccumulate();
+        // playerAnimation.PlayerAccumulate();
         
     }
     private void AccumulateFinish(InputAction.CallbackContext obj)

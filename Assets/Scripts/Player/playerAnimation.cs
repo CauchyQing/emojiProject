@@ -38,7 +38,7 @@ public class playerAnimation : MonoBehaviour
 
     public void PlayerNormalAttack()
     {
-        anim.SetTrigger("normalAttack");
+        anim?.SetTrigger("normalAttack");
     }
     
     public void PlayerAccumulate()
