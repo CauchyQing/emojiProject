@@ -76,7 +76,7 @@ public class playerController : MonoBehaviour
   
         if (playerAttribution.isPlatform)
         {
-            gameObject.layer = LayerMask.NameToLayer("MovingPlatform");
+            gameObject.layer = LayerMask.NameToLayer("Platform");
             Invoke("Recovery", recoveryTime);
         }
     }
