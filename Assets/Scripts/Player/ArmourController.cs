@@ -95,6 +95,15 @@ public class ArmourController : MonoBehaviour
         RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Weapon") && PlayerWeapon == "empty")
+        {
+            SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
+            Destroy(other.gameObject);
+        }
+    }
+
     private void Update()
     {
         if (PlayerWeapon == "empty" && playerController.isNormalAttack)
