@@ -10,12 +10,12 @@ public class playerAttribution : MonoBehaviour
     private playerAnimation anim;
     private Rigidbody2D rb;
     [Header("基本属性")]
-    public float strikeOdds;    //初始击飞概率
-    public float currentOdds;   //当前击飞概率
+    public float health=100;    //初始血量
+    public float currentHealth;   //当前血量
 
     public UnityEvent<playerAttribution> OnAttack;  //攻击事件
-    public UnityEvent<Transform> OnTakeDamage;  //受伤改变击飞概率
-    public UnityEvent Ondie;
+    public UnityEvent<Transform> OnTakeDamage;  //受伤事件
+    public UnityEvent Ondie;        //死亡事件
 
 
     [Header("检测参数")]
@@ -45,24 +45,35 @@ public class playerAttribution : MonoBehaviour
 
     private void Start()
     {
-        currentOdds = strikeOdds;
+        currentHealth = health;
         anim= GetComponent<playerAnimation>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(Attack attacker)
     {
-        currentOdds += attacker.damage;
-
-        rb.AddForce(transform.up*attacker.attackForce, ForceMode2D.Impulse);
-        if(attacker.tf.position.x<transform.position.x)
-            rb.AddForce(transform.right * attacker.attackForce, ForceMode2D.Impulse);
-        else
-            rb.AddForce(-1*transform.right * attacker.attackForce, ForceMode2D.Impulse);
-        anim.PlayerHurt();
+        currentHealth -= attacker.damage;
         OnTakeDamage?.Invoke(attacker.transform);
+    
+        if(currentHealth<=0)
+        {
+            currentHealth = 0;
+            Ondie?.Invoke();
+            rb.AddForce(transform.up * attacker.attackForce, ForceMode2D.Impulse);
+            if (attacker.tf.position.x < transform.position.x)
+                rb.AddForce(transform.right * attacker.attackForce*5, ForceMode2D.Impulse);
+            else
+                rb.AddForce(-1 * transform.right * attacker.attackForce*5, ForceMode2D.Impulse);
+            anim.PlayerHurt();
+        }
+        else {
+            rb.AddForce(transform.up * attacker.attackForce, ForceMode2D.Impulse);
+            if (attacker.tf.position.x < transform.position.x)
+                rb.AddForce(transform.right * attacker.attackForce, ForceMode2D.Impulse);
+            else
+                rb.AddForce(-1 * transform.right * attacker.attackForce, ForceMode2D.Impulse);
+            anim.PlayerHurt();
+        }
+        
     }
-
-
-
 }
