@@ -24,6 +24,7 @@ public class playerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ////////
         SetAnimation();
     }
     //绑定Animation中的属性
