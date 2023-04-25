@@ -1081,13 +1081,49 @@ MonoBehaviour:
   currentHealth: 0
   OnAttack:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+        m_TargetAssemblyTypeName: PlayAudioEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 24b9095c845440c45b1bedbae8b1c9cd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTakeDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 9c0eb67e8228e554894c2af58eaf0397, type: 2}
+        m_TargetAssemblyTypeName: VoidEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Ondie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 9c0eb67e8228e554894c2af58eaf0397, type: 2}
+        m_TargetAssemblyTypeName: VoidEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
@@ -1236,6 +1272,78 @@ PrefabInstance:
     - target: {fileID: 6716714051726491480, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c0eb67e8228e554894c2af58eaf0397, type: 2}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RaiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RaiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c0eb67e8228e554894c2af58eaf0397, type: 2}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RaiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VoidEventSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayAudioEventSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 24b9095c845440c45b1bedbae8b1c9cd, type: 3}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VoidEventSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: Ondie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
