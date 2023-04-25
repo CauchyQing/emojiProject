@@ -80,6 +80,15 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Defend"",
+                    ""type"": ""Button"",
+                    ""id"": ""5fe81fac-412d-4526-88f0-8a6fdcfffe0d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -333,6 +342,17 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""59db5180-e532-4d4f-ad9a-63228600a033"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Defend"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -926,6 +946,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         m_GamePlay_Jump = m_GamePlay.FindAction("Jump", throwIfNotFound: true);
         m_GamePlay_Accumulate = m_GamePlay.FindAction("Accumulate", throwIfNotFound: true);
         m_GamePlay_Down = m_GamePlay.FindAction("Down", throwIfNotFound: true);
+        m_GamePlay_Defend = m_GamePlay.FindAction("Defend", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1005,6 +1026,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_GamePlay_Jump;
     private readonly InputAction m_GamePlay_Accumulate;
     private readonly InputAction m_GamePlay_Down;
+    private readonly InputAction m_GamePlay_Defend;
     public struct GamePlayActions
     {
         private @PlayerInputSystem m_Wrapper;
@@ -1015,6 +1037,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_GamePlay_Jump;
         public InputAction @Accumulate => m_Wrapper.m_GamePlay_Accumulate;
         public InputAction @Down => m_Wrapper.m_GamePlay_Down;
+        public InputAction @Defend => m_Wrapper.m_GamePlay_Defend;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1042,6 +1065,9 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
             @Down.started += instance.OnDown;
             @Down.performed += instance.OnDown;
             @Down.canceled += instance.OnDown;
+            @Defend.started += instance.OnDefend;
+            @Defend.performed += instance.OnDefend;
+            @Defend.canceled += instance.OnDefend;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -1064,6 +1090,9 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
             @Down.started -= instance.OnDown;
             @Down.performed -= instance.OnDown;
             @Down.canceled -= instance.OnDown;
+            @Defend.started -= instance.OnDefend;
+            @Defend.performed -= instance.OnDefend;
+            @Defend.canceled -= instance.OnDefend;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -1252,6 +1281,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnAccumulate(InputAction.CallbackContext context);
         void OnDown(InputAction.CallbackContext context);
+        void OnDefend(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

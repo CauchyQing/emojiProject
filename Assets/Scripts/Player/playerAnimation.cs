@@ -35,6 +35,7 @@ public class playerAnimation : MonoBehaviour
         anim.SetBool("isGround",attribution.isGround);
         anim.SetBool("isNormalAttack", playerController.isNormalAttack);
         anim.SetBool("isAccumulateAttack", playerController.isAccumulate);
+        anim.SetBool("isDefend", playerController.isDefend);
     }
 
     public void PlayerNormalAttack()
@@ -46,6 +47,11 @@ public class playerAnimation : MonoBehaviour
     {
         anim.SetTrigger("accumulate");
     }
+    public void PlayerDefend()
+    {
+        anim.SetTrigger("defend");
+    }
+
 
     public void PlayerHurt()
     {

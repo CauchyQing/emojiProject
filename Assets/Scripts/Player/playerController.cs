@@ -17,6 +17,7 @@ public class playerController : MonoBehaviour
     public float jumpForce;
     public bool isNormalAttack;
     public bool isAccumulate;
+    public bool isDefend;
     public float recoveryTime;
     private void Awake()
     {
@@ -30,9 +31,10 @@ public class playerController : MonoBehaviour
         inputControl.GamePlay.Fire.started += NormalAttack;
         inputControl.GamePlay.Accumulate.started += AccumulateAttack;
         inputControl.GamePlay.Accumulate.canceled += AccumulateFinish;
+        inputControl.GamePlay.Defend.started += Defend;
     }
 
-
+    
 
     private void OnEnable()
     {
@@ -82,8 +84,6 @@ public class playerController : MonoBehaviour
     }
     private void Recovery()
     {
-
-
         gameObject.layer = LayerMask.NameToLayer("Default");
 
     }
@@ -109,7 +109,11 @@ public class playerController : MonoBehaviour
         playerAttribution.OnAttack?.Invoke(playerAttribution);
         isAccumulate = false;
     }
-    
+    private void Defend(InputAction.CallbackContext obj)
+    {
+        isDefend=true;
+        playerAnimation.PlayerDefend();
+    }
     // Start is called before the first frame update
     void Start()
     {
