@@ -2811,7 +2811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa91e25e9a86e894b8984dca67521617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 50
   attackRange: 0
   attackRate: 0
   attackTime: 0
@@ -2865,8 +2865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0ab277a668d4f49a85ac5f4d1300ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strikeOdds: 0
-  currentOdds: 0
+  health: 100
+  currentHealth: 0
   OnAttack:
     m_PersistentCalls:
       m_Calls: []
@@ -3025,31 +3025,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1712650974768547501, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_Size.x
-      value: 2.2458334
+      value: 0.0000506
       objectReference: {fileID: 0}
     - target: {fileID: 1712650974768547501, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_Size.y
-      value: 1.9375
+      value: 0.0000304
       objectReference: {fileID: 0}
     - target: {fileID: 1712650974768547501, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 848ccf65b7cba524f94218abe0884b60, type: 3}
+      objectReference: {fileID: 9028723739412666752, guid: b6d543bd6aa8252498ade803922c835c, type: 3}
     - target: {fileID: 1712650974768547501, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1885538103941810702, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_SpriteHash
       value: 334069828
       objectReference: {fileID: 0}
     - target: {fileID: 2411176111099024131, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.0000506
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411176111099024131, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.0000304
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411176111099024131, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.1083333
+      value: 0.0000506
       objectReference: {fileID: 0}
     - target: {fileID: 2411176111099024131, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.2666667
+      value: 0.0000304
       objectReference: {fileID: 0}
     - target: {fileID: 3304845488696462168, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_SpriteHash
@@ -3143,10 +3151,6 @@ PrefabInstance:
       propertyPath: ShoeLabels.Array.data[2]
       value: climbing
       objectReference: {fileID: 0}
-    - target: {fileID: 7196787824306238943, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
-      propertyPath: originalContorller
-      value: 
-      objectReference: {fileID: 9100000, guid: 229a50584fa27ad4eb1339678481b318, type: 2}
     - target: {fileID: 8295616888194385830, guid: bc2bbee7db5dd3543ab50db6c9aff3e3, type: 3}
       propertyPath: m_SpriteHash
       value: 713961759

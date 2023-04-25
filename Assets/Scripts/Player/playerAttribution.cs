@@ -66,14 +66,14 @@ public class playerAttribution : MonoBehaviour
                 rb.AddForce(-1 * transform.right * attacker.attackForce*5, ForceMode2D.Impulse);
             anim.PlayerHurt();
         }
-
-
-
-        rb.AddForce(transform.up*attacker.attackForce, ForceMode2D.Impulse);
-        if(attacker.tf.position.x<transform.position.x)
-            rb.AddForce(transform.right * attacker.attackForce, ForceMode2D.Impulse);
-        else
-            rb.AddForce(-1*transform.right * attacker.attackForce, ForceMode2D.Impulse);
-        anim.PlayerHurt();
+        else {
+            rb.AddForce(transform.up * attacker.attackForce, ForceMode2D.Impulse);
+            if (attacker.tf.position.x < transform.position.x)
+                rb.AddForce(transform.right * attacker.attackForce, ForceMode2D.Impulse);
+            else
+                rb.AddForce(-1 * transform.right * attacker.attackForce, ForceMode2D.Impulse);
+            anim.PlayerHurt();
+        }
+        
     }
 }
