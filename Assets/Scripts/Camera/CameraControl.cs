@@ -31,19 +31,19 @@ public class CameraControl : MonoBehaviour
     }
 
     //
-    private void Start()
-    {
-        GetNewCameraBounds();
-    }
+    /*    private void Start()
+        {
+            GetNewCameraBounds();
+        }
 
-    private void GetNewCameraBounds()
-    {
-        var obj = GameObject.FindGameObjectWithTag("Bounds");
-        if (obj == null)
-            return;
+        private void GetNewCameraBounds()
+        {
+            var obj = GameObject.FindGameObjectWithTag("Bounds");
+            if (obj == null)
+                return;
 
-        confiner2D.m_BoundingShape2D = obj.GetComponent<Collider2D>();
+            confiner2D.m_BoundingShape2D = obj.GetComponent<Collider2D>();
 
-        confiner2D.InvalidateCache();
-    }
+            confiner2D.InvalidateCache();
+        }*/
 }
