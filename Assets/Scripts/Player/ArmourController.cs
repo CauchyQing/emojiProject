@@ -6,6 +6,7 @@
 
 
 
+using System.CodeDom;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,7 +43,7 @@ public class ArmourController : MonoBehaviour
     {
         spriteLibrary = GetComponent<SpriteLibrary>();
         playerController = GetComponent<playerController>();
-        foreach (var resolver in FindObjectsOfType<SpriteResolver>())
+        foreach (var resolver in GetComponentsInChildren<SpriteResolver>())
         {
             var category = resolver.GetCategory();
             switch (category)
@@ -70,8 +71,11 @@ public class ArmourController : MonoBehaviour
     }
     public void SetWeapon(string WeaponLabel)
     {
-        Weapon.SetCategoryAndLabel(Weapon.GetCategory(), WeaponLabel);
-        PlayerWeapon = WeaponLabel;
+        if (Weapon != null)
+        {
+            Weapon.SetCategoryAndLabel(Weapon.GetCategory(), WeaponLabel);
+            PlayerWeapon = WeaponLabel;
+        }
     }
 
     public void NextFace()
