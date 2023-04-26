@@ -27,15 +27,15 @@ public class playerAttribution : MonoBehaviour
     public LayerMask platformLayer;//平台检测层
     public bool isGround;
     public bool isPlatform;//判断是否在平台
-    STATE state;
+    
     public enum STATE { 
         NOTHING,
         DEFEND,
         NORMALATTACK,
         ACCUMULATEATTACK
     }
+    public STATE state;
 
-    
     private void Update()
     {
         Check();
@@ -52,6 +52,8 @@ public class playerAttribution : MonoBehaviour
             state = STATE.NORMALATTACK;
         else
             state = STATE.NOTHING;
+
+        
     }
 
     public void Check()
@@ -71,12 +73,16 @@ public class playerAttribution : MonoBehaviour
         currentHealth = health;
         anim= GetComponent<playerAnimation>();
         rb = GetComponent<Rigidbody2D>();
+        pc=GetComponent<playerController>();
     }
 
     public void TakeDamage(Attack attacker)
     {
-        if(attacker.pa.state==STATE.NORMALATTACK) {
+        
+        
+        if (attacker.pa.state == STATE.NORMALATTACK) {
             TakeDamageHelp(attacker, 1);
+
         }
         else if(attacker.pa.state==STATE.ACCUMULATEATTACK&&this.state!=STATE.DEFEND) {
             TakeDamageHelp(attacker, (float)1.5);
@@ -107,6 +113,7 @@ public class playerAttribution : MonoBehaviour
                 attacker.pa.anim.PlayerHurt();
             }
         }
+        
     }
 
     public void TakeDamageHelp(Attack attacker,float x)

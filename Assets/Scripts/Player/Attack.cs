@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Attack : MonoBehaviour
@@ -12,9 +13,13 @@ public class Attack : MonoBehaviour
     public float attackForce;
     public Transform tf;
     public playerAttribution pa;
+    private void OnEnable()
+    {
+        pa = GetComponent<playerAttribution>();
+        tf = GetComponent<Transform>();
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
-        pa=GetComponent<playerAttribution>();
         other.GetComponent<playerAttribution>().TakeDamage(this);
     }
 
