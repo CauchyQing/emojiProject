@@ -120,4 +120,11 @@ public class ArmourController : MonoBehaviour
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "hand");
         }
     }
+
+    /*武器掉落，需传入掉落武器的Transform*/
+    public void WeaponsDrops(Transform transform)
+    {
+        SetWeapon("empty");
+        WeaponManager.Instance.InstantiateWeapon(PlayerWeapon, transform);
+    }
 }

@@ -699,6 +699,52 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &624289044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624289046}
+  - component: {fileID: 624289045}
+  m_Layer: 0
+  m_Name: Weapon Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &624289045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624289044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de1ea3cfc37a044d9eed2a36213e96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponPrefabs:
+  - {fileID: 2042124010399030589, guid: 5ab2b154a7e882046af2fe0b24ddc21a, type: 3}
+--- !u!4 &624289046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624289044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1171943776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,10 +1081,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1712650974768547501, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9028723739412666752, guid: b6d543bd6aa8252498ade803922c835c, type: 3}
+    - target: {fileID: 1885538103941810702, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_SpriteHash
+      value: 334069828
+      objectReference: {fileID: 0}
     - target: {fileID: 2411176111099024131, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3304845488696462168, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_SpriteHash
+      value: 491525721
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527040187467622397, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -715265748140342274, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     - target: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_Name
       value: Emoji-Character
