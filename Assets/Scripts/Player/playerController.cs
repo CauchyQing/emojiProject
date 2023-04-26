@@ -15,6 +15,7 @@ public class playerController : MonoBehaviour
     [Header("基本参数")]
     public float speed;
     public float jumpForce;
+
     public bool isNormalAttack;
     public bool isAccumulate;
     public bool isDefend;

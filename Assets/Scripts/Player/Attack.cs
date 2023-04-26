@@ -11,9 +11,10 @@ public class Attack : MonoBehaviour
     public float attackTime;
     public float attackForce;
     public Transform tf;
-
+    public playerAttribution pa;
     private void OnTriggerStay2D(Collider2D other)
     {
+        pa=GetComponent<playerAttribution>();
         other.GetComponent<playerAttribution>().TakeDamage(this);
     }
 
