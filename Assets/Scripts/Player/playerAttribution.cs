@@ -38,8 +38,9 @@ public class playerAttribution : MonoBehaviour
     
     private void Update()
     {
-        updateSTATE();
         Check();
+        updateSTATE();
+       
     }
     public void updateSTATE()
     {
