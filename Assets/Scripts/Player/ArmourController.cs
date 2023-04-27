@@ -43,7 +43,7 @@ public class ArmourController : MonoBehaviour
     {
         spriteLibrary = GetComponent<SpriteLibrary>();
         playerController = GetComponent<playerController>();
-        foreach (var resolver in FindObjectsOfType<SpriteResolver>())
+        foreach (var resolver in GetComponentsInChildren<SpriteResolver>())
         {
             var category = resolver.GetCategory();
             switch (category)
