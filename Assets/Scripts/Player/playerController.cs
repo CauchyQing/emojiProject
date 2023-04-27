@@ -108,7 +108,7 @@ public class playerController : MonoBehaviour
         
         playerAnimation.PlayerAccumulate();
         playerAttribution.OnAttack?.Invoke(playerAttribution);
-        isAccumulate = false;
+        
     }
     private void Defend(InputAction.CallbackContext obj)
     {

@@ -44,7 +44,7 @@ public class playerAttribution : MonoBehaviour
     }
     public void updateSTATE()
     {
-        if (pc.isDefend)
+        if (pc.isDefend) 
             state = STATE.DEFEND;
         else if (pc.isAccumulate)
             state = STATE.ACCUMULATEATTACK;
@@ -76,20 +76,21 @@ public class playerAttribution : MonoBehaviour
         pc=GetComponent<playerController>();
     }
 
-    public void TakeDamage(Attack attacker)
+    public void TakeDamage(Attack attacker,STATE s)
     {
-        
-        
-        if (attacker.pa.state == STATE.NORMALATTACK) {
-            TakeDamageHelp(attacker, 1);
 
+        
+        if (s==STATE.NORMALATTACK) {
+            TakeDamageHelp(attacker, 1);
+            
         }
-        else if(attacker.pa.state==STATE.ACCUMULATEATTACK&&this.state!=STATE.DEFEND) {
+        else if(s==STATE.ACCUMULATEATTACK && state != STATE.DEFEND) {
             TakeDamageHelp(attacker, (float)1.5);
         }
-        else if(attacker.pa.state==STATE.ACCUMULATEATTACK && this.state == STATE.DEFEND)
+        else if(attacker.pa.state==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
         {
             attacker.pa.currentHealth -= attacker.damage*2;
+            OnTakeDamage?.Invoke(this.transform);
             OnTakeDamage?.Invoke(this.transform);
 
             if (attacker.pa.currentHealth <= 0)
