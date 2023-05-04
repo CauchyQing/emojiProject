@@ -8,9 +8,10 @@ using UnityEngine.Rendering.UI;
 public class playerAttribution : MonoBehaviour
 {
 
-    private playerAnimation anim;
-    private Rigidbody2D rb;
-    private playerController pc;
+    public playerAnimation anim;
+    public Rigidbody2D rb;
+    public playerController pc;
+    
     [Header("基本属性")]
     public float health=100;    //初始血量
     public float currentHealth;   //当前血量
@@ -79,15 +80,15 @@ public class playerAttribution : MonoBehaviour
     public void TakeDamage(Attack attacker,STATE s)
     {
 
-        
         if (s==STATE.NORMALATTACK) {
             TakeDamageHelp(attacker, 1);
             
         }
-        else if(s==STATE.ACCUMULATEATTACK && state != STATE.DEFEND) {
+       else if(s==STATE.ACCUMULATEATTACK && state != STATE.DEFEND) {
             TakeDamageHelp(attacker, (float)1.5);
         }
-        else if(attacker.pa.state==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
+        
+        else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
         {
             attacker.pa.currentHealth -= attacker.damage*2;
             OnTakeDamage?.Invoke(this.transform);
@@ -114,7 +115,7 @@ public class playerAttribution : MonoBehaviour
                 attacker.pa.anim.PlayerHurt();
             }
         }
-        
+
     }
 
     public void TakeDamageHelp(Attack attacker,float x)
@@ -127,11 +128,12 @@ public class playerAttribution : MonoBehaviour
             currentHealth = 0;
             Ondie?.Invoke();
             rb.AddForce(transform.up * attacker.attackForce*x, ForceMode2D.Impulse);
+            anim.PlayerHurt();
             if (attacker.tf.position.x < transform.position.x)
                 rb.AddForce(transform.right * attacker.attackForce * 5*x, ForceMode2D.Impulse);
             else
                 rb.AddForce(-1 * transform.right * attacker.attackForce * 5*x, ForceMode2D.Impulse);
-            anim.PlayerHurt();
+     
         }
         else
         {
@@ -140,7 +142,7 @@ public class playerAttribution : MonoBehaviour
                 rb.AddForce(transform.right * attacker.attackForce * x, ForceMode2D.Impulse);
             else
                 rb.AddForce(-1 * transform.right * attacker.attackForce * x, ForceMode2D.Impulse);
-            anim.PlayerHurt();
+           
         }
     }
     

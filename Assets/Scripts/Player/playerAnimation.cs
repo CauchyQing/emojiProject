@@ -7,11 +7,11 @@ public class playerAnimation : MonoBehaviour
     // Start is called before the first frame update
     private Animator anim;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
-    private playerAttribution attribution;
+    public playerAttribution attribution;
 
-    private playerController playerController;
+    public playerController playerController;
    
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class playerAnimation : MonoBehaviour
     //绑定Animation中的属性
     public void SetAnimation()
     {
-        anim.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("velocityX", Mathf.Abs(playerController.inputDirection.x));
         anim.SetFloat("velocityY", rb.velocity.y);
         anim.SetBool("isGround",attribution.isGround);
         anim.SetBool("isNormalAttack", playerController.isNormalAttack);
@@ -45,7 +45,7 @@ public class playerAnimation : MonoBehaviour
     
     public void PlayerAccumulate()
     {
-        anim.SetTrigger("accumulate");
+        anim.SetBool ("accumulate",true);
     }
     public void PlayerDefend()
     {
