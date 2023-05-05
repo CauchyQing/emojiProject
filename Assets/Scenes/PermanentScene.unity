@@ -528,6 +528,50 @@ MonoBehaviour:
   BGMEvent: {fileID: 11400000, guid: 0f273956867715d449c4994b9ab70abb, type: 2}
   BGMSource: {fileID: 498405134}
   FXSource: {fileID: 498405135}
+--- !u!1 &518818771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518818772}
+  - component: {fileID: 518818773}
+  m_Layer: 0
+  m_Name: SceneLoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518818772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518818771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518818773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518818771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c705dec70b09c341b1b29c627753c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +794,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2061278187762573184, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
   m_PrefabInstance: {fileID: 3832960245531258197}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148660343}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7dd561dc384c041bf18f5a4c3b3747, type: 3}
@@ -981,7 +1025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606333850
 GameObject:
@@ -1100,7 +1144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2085595553}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7dd561dc384c041bf18f5a4c3b3747, type: 3}
   m_Name: 
@@ -1228,7 +1272,7 @@ PrefabInstance:
       objectReference: {fileID: 9028723739412666752, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     - target: {fileID: 2061278187762573184, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2411176111099024131, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1306,6 +1350,10 @@ PrefabInstance:
       propertyPath: PlayerWeapon
       value: sword
       objectReference: {fileID: 0}
+    - target: {fileID: 8194425426601227355, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1335,14 +1383,6 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 2411176111099024131, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
-      propertyPath: m_UsedByEffector
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3304845488696462168, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
-      propertyPath: m_SpriteHash
-      value: 491525721
-      objectReference: {fileID: 0}
     - target: {fileID: 3667995830995368585, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: pa
       value: 
@@ -1359,10 +1399,6 @@ PrefabInstance:
       propertyPath: attackForce
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5527040187467622397, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -715265748140342274, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
     - target: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_Name
       value: Emoji-Character

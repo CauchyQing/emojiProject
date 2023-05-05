@@ -606,6 +606,8 @@ GameObject:
   - component: {fileID: 7462130854528619003}
   - component: {fileID: 7196787824306238943}
   - component: {fileID: 4409306863424732715}
+  - component: {fileID: -5890610478462365125}
+  - component: {fileID: 1551013433315223643}
   m_Layer: 0
   m_Name: Emoji-Character
   m_TagString: Player
@@ -1023,6 +1025,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Library: []
   m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 9f5eee5f9a26d774b8c0c59644b5ef73, type: 3}
+--- !u!114 &-5890610478462365125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620094325498275643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6f40d8e924c1748aa8de02b8617ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAudioEvent: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+  audioClip: {fileID: 8300000, guid: 296e796a3a99d7f46b144569472b2900, type: 3}
+  playOnEnable: 1
+--- !u!114 &1551013433315223643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620094325498275643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6f40d8e924c1748aa8de02b8617ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAudioEvent: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+  audioClip: {fileID: 8300000, guid: 296e796a3a99d7f46b144569472b2900, type: 3}
+  playOnEnable: 0
 --- !u!1 &5712659595385472992
 GameObject:
   m_ObjectHideFlags: 0
