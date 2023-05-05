@@ -519,10 +519,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isNormalAttack
+    m_ConditionEvent: normalAttack
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: normalAttack
+    m_ConditionEvent: isNormalAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4456137887524774898}

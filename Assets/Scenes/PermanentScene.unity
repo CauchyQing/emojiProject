@@ -658,7 +658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.204566, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 5.980734, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -857,18 +857,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 908442497}
-        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
-        m_MethodName: AccumulateFinish
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
     m_ActionId: 4b076860-cd4a-4a7a-9570-f2ab82d8151c
     m_ActionName: GamePlay/Accumulate[/Keyboard/k]
   - m_PersistentCalls:
@@ -1061,7 +1049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606333850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.204566, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 5.980734, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1226,6 +1214,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1608203662872552683, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608203662872552683, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712650974768547501, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1323,6 +1319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1608203662872552683, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Move
+      objectReference: {fileID: 0}
     - target: {fileID: 1712650974768547501, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1483,11 +1483,12 @@ PrefabInstance:
       propertyPath: OnTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1608203662872552683, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
-      insertIndex: 6
+      insertIndex: 5
       addedObject: {fileID: 1148660350}
   m_SourcePrefab: {fileID: 100100000, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
