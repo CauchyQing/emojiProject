@@ -658,7 +658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.673409, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 6.204566, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,17 +756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7dd561dc384c041bf18f5a4c3b3747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &908442498 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8503498093041095461, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
-  m_PrefabInstance: {fileID: 3832960245531258197}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148660343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd0ab277a668d4f49a85ac5f4d1300ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &908442502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6716714051726491480, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
@@ -855,7 +844,31 @@ MonoBehaviour:
     m_ActionId: 383381e7-7d06-4887-a200-5abc56e8f46f
     m_ActionName: GamePlay/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 908442497}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: AccumulateAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 908442497}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: AccumulateFinish
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
     m_ActionId: 4b076860-cd4a-4a7a-9570-f2ab82d8151c
     m_ActionName: GamePlay/Accumulate[/Keyboard/k]
   - m_PersistentCalls:
@@ -1048,7 +1061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606333850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.673409, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 6.204566, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1333,7 +1346,7 @@ PrefabInstance:
     - target: {fileID: 3667995830995368585, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: pa
       value: 
-      objectReference: {fileID: 908442498}
+      objectReference: {fileID: 0}
     - target: {fileID: 3667995830995368585, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       propertyPath: tf
       value: 
