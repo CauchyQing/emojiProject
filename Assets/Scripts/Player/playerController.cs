@@ -8,7 +8,7 @@ public class playerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private playerAttribution playerAttribution;
-    
+
     public playerAnimation playerAnimation;
     public Vector2 inputDirection;
 
@@ -27,15 +27,15 @@ public class playerController : MonoBehaviour
         playerAnimation = GetComponent<playerAnimation>();
     }
 
-    
+
 
     private void OnEnable()
     {
-        
+
     }
     private void OnDisable()
     {
-        
+
     }
     private void Update()
     {
@@ -43,23 +43,26 @@ public class playerController : MonoBehaviour
     }
 
 
-   
+
 
     public void Move(InputAction.CallbackContext ctx)
     {
 
         inputDirection = ctx.ReadValue<Vector2>();
-
+        Debug.Log("123");
         //ÈËÎï·­×ª
         int faceDirection = (int)transform.localScale.x;
-        if (inputDirection.x < 0) {
+        if (inputDirection.x < 0)
+        {
 
             faceDirection = -1;
         }
-            
-        else if (inputDirection.x > 0) { 
-            faceDirection = 1; }
-            
+
+        else if (inputDirection.x > 0)
+        {
+            faceDirection = 1;
+        }
+
         transform.localScale = new Vector3(faceDirection, 1, 1);
     }
 
@@ -70,7 +73,7 @@ public class playerController : MonoBehaviour
     }
     public void Down(InputAction.CallbackContext obj)
     {
-  
+
         if (playerAttribution.isPlatform)
         {
             gameObject.layer = LayerMask.NameToLayer("Platform");
@@ -95,18 +98,18 @@ public class playerController : MonoBehaviour
     {
         isAccumulate = true;
         // playerAnimation.PlayerAccumulate();
-        
+
     }
     public void AccumulateFinish(InputAction.CallbackContext obj)
     {
-        
+
         playerAnimation.PlayerAccumulate();
         playerAttribution.OnAttack?.Invoke(playerAttribution);
-        
+
     }
     public void Defend(InputAction.CallbackContext obj)
     {
-        isDefend=true;
+        isDefend = true;
         playerAnimation.PlayerDefend();
     }
     // Start is called before the first frame update
