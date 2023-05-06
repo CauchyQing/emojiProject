@@ -807,7 +807,7 @@ MonoBehaviour:
   playerAnimation: {fileID: 0}
   inputDirection: {x: 0, y: 0}
   speed: 10
-  jumpForce: 15
+  jumpForce: 20
   isNormalAttack: 0
   isAccumulate: 0
   isDefend: 0
