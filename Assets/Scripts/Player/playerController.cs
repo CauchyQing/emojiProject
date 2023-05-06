@@ -112,33 +112,22 @@ public class playerController : MonoBehaviour
 
     }
 
-    
+
     public void Defend(InputAction.CallbackContext obj)
     {
         if (obj.performed) {
             isDefend = true;
             playerAnimation.PlayerDefend();
         }
-        
 
-    public void AccumulateFinish(InputAction.CallbackContext obj)
-    {
 
-        playerAnimation.PlayerAccumulate();
-        playerAttribution.OnAttack?.Invoke(playerAttribution);
 
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
     }
-    public void Defend(InputAction.CallbackContext obj)
-    {
-        isDefend = true;
-        playerAnimation.PlayerDefend();
->>>>>>> 7988c8f4a7a3134928bf39e4b1591d156fa6caa1
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
+
 
