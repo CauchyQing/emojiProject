@@ -92,18 +92,19 @@ public class playerController : MonoBehaviour
 
     public void NormalAttack(InputAction.CallbackContext obj)
     {
-        if (obj.performed) {
+        if (obj.performed)
+        {
             isNormalAttack = true;
             playerAnimation.PlayerNormalAttack();
             playerAttribution.OnAttack?.Invoke(playerAttribution);
         }
-        
+
     }
 
     public void AccumulateAttack(InputAction.CallbackContext obj)
     {
         if (obj.performed) { isAccumulate = true; }
-        if(obj.canceled)
+        if (obj.canceled)
         {
             playerAnimation.PlayerAccumulate();
             playerAttribution.OnAttack?.Invoke(playerAttribution);
@@ -115,19 +116,13 @@ public class playerController : MonoBehaviour
 
     public void Defend(InputAction.CallbackContext obj)
     {
-        if (obj.performed) {
+        if (obj.performed)
+        {
             isDefend = true;
             playerAnimation.PlayerDefend();
         }
-
-
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
     }
+}
     // Update is called once per frame
 
 
