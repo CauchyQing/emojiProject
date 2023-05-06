@@ -68,7 +68,7 @@ public class playerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext obj)
     {
-        if (playerAttribution.isGround)
+        if (playerAttribution.isGround && obj.performed)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             GetComponent<AudioDefination>()?.PlayAudioClip();
@@ -77,7 +77,7 @@ public class playerController : MonoBehaviour
     public void Down(InputAction.CallbackContext obj)
     {
 
-        if (playerAttribution.isPlatform)
+        if (playerAttribution.isPlatform&&obj.performed)
         {
             gameObject.layer = LayerMask.NameToLayer("Platform");
             Invoke("Recovery", recoveryTime);
