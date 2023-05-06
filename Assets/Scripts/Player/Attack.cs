@@ -12,7 +12,7 @@ public class Attack : MonoBehaviour
     public Transform tf;
     public playerAttribution pa;
     public playerController controller;
-    
+
     //private void OnTriggerStay2D(Collider2D other)
     //{
     //    Debug.Log("pengzhuang");
@@ -23,17 +23,17 @@ public class Attack : MonoBehaviour
         Debug.Log("pengzhuang");
         other.GetComponent<playerAttribution>().TakeDamage(this, pa.state);
     }
-// Start is called before the first frame update
-void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         pa = GetComponentInParent<playerAttribution>();
-        tf=GetComponent<Transform>();
+        tf = GetComponent<Transform>();
         controller = GetComponentInParent<playerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
