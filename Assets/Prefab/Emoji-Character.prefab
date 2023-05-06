@@ -601,8 +601,8 @@ GameObject:
   - component: {fileID: 7115833382571028249}
   - component: {fileID: 3415477207734184350}
   - component: {fileID: 8503498093041095461}
+  - component: {fileID: 2682197510410957809}
   - component: {fileID: 2061278187762573184}
-  - component: {fileID: 1608203662872552683}
   - component: {fileID: 7462130854528619003}
   - component: {fileID: 7196787824306238943}
   - component: {fileID: 4409306863424732715}
@@ -634,7 +634,7 @@ Transform:
   - {fileID: 8041898330886822657}
   - {fileID: 8146146077002834067}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -0.317, z: -0.04}
 --- !u!70 &6949257291338906730
 CapsuleCollider2D:
@@ -792,27 +792,7 @@ MonoBehaviour:
   isGround: 0
   isPlatform: 0
   state: 0
---- !u!114 &2061278187762573184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5620094325498275643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7dd561dc384c041bf18f5a4c3b3747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAnimation: {fileID: 0}
-  inputDirection: {x: 0, y: 0}
-  speed: 10
-  jumpForce: 20
-  isNormalAttack: 0
-  isAccumulate: 0
-  isDefend: 0
-  recoveryTime: 0.3
---- !u!114 &1608203662872552683
+--- !u!114 &2682197510410957809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -890,7 +870,19 @@ MonoBehaviour:
     m_ActionId: 383381e7-7d06-4887-a200-5abc56e8f46f
     m_ActionName: GamePlay/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061278187762573184}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: AccumulateAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4b076860-cd4a-4a7a-9570-f2ab82d8151c
     m_ActionName: GamePlay/Accumulate[/Keyboard/k]
   - m_PersistentCalls:
@@ -970,6 +962,26 @@ MonoBehaviour:
   m_DefaultActionMap: GamePlay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2061278187762573184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620094325498275643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7dd561dc384c041bf18f5a4c3b3747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimation: {fileID: 0}
+  inputDirection: {x: 0, y: 0}
+  speed: 10
+  jumpForce: 15
+  isNormalAttack: 0
+  isAccumulate: 0
+  isDefend: 0
+  recoveryTime: 0.3
 --- !u!114 &7462130854528619003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,9 +1269,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
-  attackForce: 1
+  attackForce: 2
   tf: {fileID: 6716714051726491480}
-  pa: {fileID: 8503498093041095461}
+  pa: {fileID: 0}
   controller: {fileID: 2061278187762573184}
 --- !u!1 &6411914224487993498
 GameObject:

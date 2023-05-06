@@ -49,12 +49,11 @@ public class playerController : MonoBehaviour
     {
 
         inputDirection = ctx.ReadValue<Vector2>();
-        Debug.Log("123");
+       
         //ÈËÎï·­×ª
         int faceDirection = (int)transform.localScale.x;
         if (inputDirection.x < 0)
         {
-
             faceDirection = -1;
         }
 
@@ -68,6 +67,7 @@ public class playerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext obj)
     {
+        Debug.Log("jump");
         if (playerAttribution.isGround && obj.performed)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
