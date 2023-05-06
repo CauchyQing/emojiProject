@@ -194,7 +194,7 @@
                 {
                     "name": "",
                     "id": "a64eb55b-9f6c-4236-89e7-c08cc0dcaf32",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<HID::BEITONG  BEITONG A1T2 BFM DONGLE >/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -216,7 +216,7 @@
                 {
                     "name": "",
                     "id": "33c7117b-4939-4fef-9f74-ec3e58476c30",
-                    "path": "<XInputController>/buttonNorth",
+                    "path": "<HID::BEITONG  BEITONG A1T2 BFM DONGLE >/button5",
                     "interactions": "Press(pressPoint=0.5,behavior=2)",
                     "processors": "",
                     "groups": "Gamepad",
@@ -238,7 +238,7 @@
                 {
                     "name": "",
                     "id": "f0df84e4-1ab8-488b-9f12-ffd76a34398c",
-                    "path": "<Gamepad>/leftStick/down",
+                    "path": "<HID::BEITONG  BEITONG A1T2 BFM DONGLE >/button4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -249,7 +249,7 @@
                 {
                     "name": "",
                     "id": "23273312-fc33-4150-913f-ca946f479f18",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<HID::BEITONG  BEITONG A1T2 BFM DONGLE >/stick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -282,7 +282,7 @@
                 {
                     "name": "",
                     "id": "051c9fdc-1274-4382-a9fd-fbc8b546d13b",
-                    "path": "<XInputController>/buttonEast",
+                    "path": "<HID::BEITONG  BEITONG A1T2 BFM DONGLE >/button2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
