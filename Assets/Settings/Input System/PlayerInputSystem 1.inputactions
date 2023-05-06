@@ -104,6 +104,61 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "WSAD",
+                    "id": "6c623f39-a8d1-4256-b35f-ef6d17540fc7",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "bbd44425-bb1d-400b-8507-1a84e78b1212",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "8138498a-60ec-4918-8682-a92903f13ca3",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "9f89d157-66a5-4f10-8627-94d9d514158f",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "d49ffd83-0799-4939-a76f-24cf277e8c3c",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "c1f7a91b-d0fd-4a62-997e-7fb9b69bf235",
                     "path": "<Gamepad>/rightStick",
@@ -149,11 +204,33 @@
                 },
                 {
                     "name": "",
+                    "id": "7e135a18-8e65-4a12-8ea0-ed44a798b67e",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "33c7117b-4939-4fef-9f74-ec3e58476c30",
                     "path": "<XInputController>/buttonNorth",
                     "interactions": "Press(pressPoint=0.5,behavior=2)",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Accumulate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f8a57518-1528-4355-b6c0-4206933d62f5",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "Press(pressPoint=0.5,behavior=2)",
+                    "processors": "",
+                    "groups": "",
                     "action": "Accumulate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -171,11 +248,22 @@
                 },
                 {
                     "name": "",
-                    "id": "59db5180-e532-4d4f-ad9a-63228600a033",
-                    "path": "<XInputController>/buttonWest",
+                    "id": "23273312-fc33-4150-913f-ca946f479f18",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59db5180-e532-4d4f-ad9a-63228600a033",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Keyboard&Mouse",
                     "action": "Defend",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -187,6 +275,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c08d1eff-6361-4d0c-8d46-5604e085741e",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
