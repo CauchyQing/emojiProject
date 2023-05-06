@@ -707,7 +707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6618857, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 6.3620753, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -993,6 +993,43 @@ MonoBehaviour:
   m_DefaultActionMap: GamePlay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1148660369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148660343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0ab277a668d4f49a85ac5f4d1300ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  pc: {fileID: 0}
+  health: 100
+  currentHealth: 0
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  Ondie:
+    m_PersistentCalls:
+      m_Calls: []
+  checkRaduis: 0
+  bottomOffset: {x: 0, y: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isGround: 0
+  isPlatform: 0
+  state: 0
 --- !u!1 &1171943776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606333850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6618857, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 6.3620753, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1339,6 +1376,43 @@ MonoBehaviour:
   m_DefaultActionMap: GamePlay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1722054535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243215097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0ab277a668d4f49a85ac5f4d1300ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  pc: {fileID: 0}
+  health: 100
+  currentHealth: 0
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  Ondie:
+    m_PersistentCalls:
+      m_Calls: []
+  checkRaduis: 0
+  bottomOffset: {x: 0, y: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isGround: 0
+  isPlatform: 0
+  state: 0
 --- !u!1 &1927242744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,12 +1649,16 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -5890610478462365125, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
     - {fileID: 0}
+    - {fileID: 6912029452503621537, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1722054525}
+    - targetCorrespondingSourceObject: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1722054535}
   m_SourcePrefab: {fileID: 100100000, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
 --- !u!1001 &3832960245531258197
 PrefabInstance:
@@ -1654,11 +1732,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.04
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6912029452503621537, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1148660359}
+    - targetCorrespondingSourceObject: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1148660369}
   m_SourcePrefab: {fileID: 100100000, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
