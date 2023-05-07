@@ -643,7 +643,7 @@ MonoBehaviour:
   playerTrans: {fileID: 0}
   firstPosition: {x: 0, y: 0, z: 0}
   loadEventSO: {fileID: 11400000, guid: 98b0fac73139a204d889eaacc8427484, type: 2}
-  firstLoadScene: {fileID: 11400000, guid: 8d2ff7312b15d89428f6d60abb300ae0, type: 2}
+  firstLoadScene: {fileID: 11400000, guid: 2d34af9bfccf47d478476c496c54309b, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 76e01d21d39c3bc4386ac98bc8135ac1, type: 2}
   fadeDuration: 0
 --- !u!1 &519420028
@@ -889,7 +889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &982629368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,7 +1240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949128289}
   - component: {fileID: 1949128290}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PLAYERS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
