@@ -159,6 +159,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "41cb746b-ab8f-493c-99d7-d18e33dba829",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "e3a264da-a3d8-46ad-b112-9c72bba1321f",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "b3f375d5-241c-42ed-a1dd-589d5869af69",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "f46d6e8c-a5ec-43d8-9edb-0f4796c4a43f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f07dc81d-c16f-4f8c-a0c5-c2b8d0167193",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "c1f7a91b-d0fd-4a62-997e-7fb9b69bf235",
                     "path": "<Gamepad>/rightStick",
@@ -215,6 +270,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d73d5f14-1aa0-469e-92cd-90a1cd426512",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "33c7117b-4939-4fef-9f74-ec3e58476c30",
                     "path": "<XInputController>/buttonNorth",
                     "interactions": "Press(pressPoint=0.5,behavior=2)",
@@ -229,6 +295,17 @@
                     "id": "f8a57518-1528-4355-b6c0-4206933d62f5",
                     "path": "<Keyboard>/numpad2",
                     "interactions": "Press(pressPoint=0.5,behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Accumulate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5edb4eb-330c-48fb-8749-f8f570fec0ac",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Accumulate",
@@ -259,6 +336,17 @@
                 },
                 {
                     "name": "",
+                    "id": "354d2ae5-6825-4606-a03d-0c2fcdeba3a5",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "59db5180-e532-4d4f-ad9a-63228600a033",
                     "path": "<XInputController>/buttonWest",
                     "interactions": "",
@@ -270,11 +358,22 @@
                 },
                 {
                     "name": "",
-                    "id": "506668c3-6b61-4471-b83c-1a6b3bd337a2",
-                    "path": "<XInputController>/buttonWest",
+                    "id": "091f946a-9719-4739-a5d8-51737cd321d1",
+                    "path": "<Keyboard>/numpad3",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
+                    "action": "Defend",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "506668c3-6b61-4471-b83c-1a6b3bd337a2",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Defend",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -294,6 +393,17 @@
                     "name": "",
                     "id": "c08d1eff-6361-4d0c-8d46-5604e085741e",
                     "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "711452d4-fdb9-4416-a0a3-ed898fbf1270",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
