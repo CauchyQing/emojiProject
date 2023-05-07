@@ -85,7 +85,7 @@ public class playerController : MonoBehaviour
     }
     public void Recovery()
     {
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Player");
 
     }
 

@@ -30,7 +30,7 @@ public class ArmourController : MonoBehaviour
 
     [HideInInspector]
     public SpriteLibrary spriteLibrary;
-  
+
     public string PlayerWeapon = "weapon";//角色当前手持的武器
 
     private playerController playerController;
