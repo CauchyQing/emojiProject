@@ -8,7 +8,7 @@ public class GetCameraElement : MonoBehaviour
     private CinemachineTargetGroup cinemachineTargetGroup;
     private GameObject[] players;
 
-    private void Start()
+    private void Update()
     {
         cinemachineTargetGroup = GetComponent<CinemachineTargetGroup>();
 
