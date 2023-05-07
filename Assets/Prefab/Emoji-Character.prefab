@@ -606,6 +606,7 @@ GameObject:
   - component: {fileID: 7196787824306238943}
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
+  - component: {fileID: 6912029452503621537}
   m_Layer: 0
   m_Name: Emoji-Character
   m_TagString: Player
@@ -1270,8 +1271,9 @@ MonoBehaviour:
   damage: 50
   attackForce: 2
   tf: {fileID: 6716714051726491480}
+  parent: {fileID: 0}
   pa: {fileID: 0}
-  controller: {fileID: 2061278187762573184}
+  controller: {fileID: 0}
 --- !u!1 &6411914224487993498
 GameObject:
   m_ObjectHideFlags: 0
