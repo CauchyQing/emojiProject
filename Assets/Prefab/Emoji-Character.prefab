@@ -606,7 +606,6 @@ GameObject:
   - component: {fileID: 7196787824306238943}
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
-  - component: {fileID: 6912029452503621537}
   m_Layer: 0
   m_Name: Emoji-Character
   m_TagString: Player
@@ -634,7 +633,7 @@ Transform:
   - {fileID: 8041898330886822657}
   - {fileID: 8146146077002834067}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0.317, z: -0.04}
 --- !u!70 &6949257291338906730
 CapsuleCollider2D:
