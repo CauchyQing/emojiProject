@@ -90,7 +90,7 @@ public class playerAttribution : MonoBehaviour
             TakeDamageHelp(attacker, (float)1.5);
         }
 
-        /* else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
+         else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
          {
              attacker.pa.currentHealth -= attacker.damage*2;
              OnTakeDamage?.Invoke(this.transform);
@@ -116,7 +116,7 @@ public class playerAttribution : MonoBehaviour
                      attacker.pa.rb.AddForce(-1 * attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
                  attacker.pa.anim.PlayerHurt();
              }
-         }*/
+         }
 
     }
 
