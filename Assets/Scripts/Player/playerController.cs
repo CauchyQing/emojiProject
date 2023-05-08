@@ -11,8 +11,8 @@ public class playerController : MonoBehaviour
 
     public playerAnimation playerAnimation;
     public Vector2 inputDirection;
-
-    [Header("基本参数")]
+    public int faceDirection;
+ [Header("基本参数")]
     public float speed;
     public float jumpForce;
 
@@ -51,7 +51,7 @@ public class playerController : MonoBehaviour
         inputDirection = ctx.ReadValue<Vector2>();
        
         //人物翻转
-        int faceDirection = (int)transform.localScale.x;
+         faceDirection = (int)transform.localScale.x;
         if (inputDirection.x < 0)
         {
             faceDirection = -1;
@@ -76,7 +76,6 @@ public class playerController : MonoBehaviour
     }
     public void Down(InputAction.CallbackContext obj)
     {
-
         if (playerAttribution.isPlatform&&obj.performed)
         {
             gameObject.layer = LayerMask.NameToLayer("Platform");
