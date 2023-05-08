@@ -90,7 +90,7 @@ public class playerAttribution : MonoBehaviour
             TakeDamageHelp(attacker, (float)1.5);
         }
 
-        /* else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
+         else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
          {
              attacker.pa.currentHealth -= attacker.damage*2;
              OnTakeDamage?.Invoke(this.transform);
@@ -100,7 +100,7 @@ public class playerAttribution : MonoBehaviour
              {
                  attacker.pa.currentHealth = 0;
                  attacker.pa.Ondie?.Invoke();
-                 attacker.pa.rb.AddForce(attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
+                 attacker.pa.rb.AddForce(2 * attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
                  if (attacker.tf.position.x < transform.position.x)
                      attacker.pa.rb.AddForce(transform.right * attacker.attackForce * 5 , ForceMode2D.Impulse);
                  else
@@ -109,14 +109,14 @@ public class playerAttribution : MonoBehaviour
              }
              else
              {
-                 attacker.pa.rb.AddForce(attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
+                 attacker.pa.rb.AddForce(2 * attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
                  if (attacker.tf.position.x < transform.position.x)
                      attacker.pa.rb.AddForce(attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
                  else
                      attacker.pa.rb.AddForce(-1 * attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
                  attacker.pa.anim.PlayerHurt();
              }
-         }*/
+         }
 
     }
 
@@ -129,7 +129,7 @@ public class playerAttribution : MonoBehaviour
         {
             currentHealth = 0;
             Ondie?.Invoke();
-            rb.AddForce(transform.up * attacker.attackForce*x, ForceMode2D.Impulse);
+            rb.AddForce(2*transform.up * attacker.attackForce*x, ForceMode2D.Impulse);
             anim.PlayerHurt();
             if (attacker.tf.position.x < transform.position.x)
                 rb.AddForce(transform.right * attacker.attackForce * 5*x, ForceMode2D.Impulse);
@@ -139,7 +139,7 @@ public class playerAttribution : MonoBehaviour
         }
         else
         {
-            rb.AddForce(transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
+            rb.AddForce(2 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             if (attacker.tf.position.x < transform.position.x)
                 rb.AddForce(transform.right * attacker.attackForce * x, ForceMode2D.Impulse);
             else
