@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 public class playerController : MonoBehaviour
 {
@@ -20,6 +20,9 @@ public class playerController : MonoBehaviour
     public bool isAccumulate;
     public bool isDefend;
     public float recoveryTime;
+
+    public UnityEvent DefendEvent;        //振刀事件
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -49,7 +52,7 @@ public class playerController : MonoBehaviour
     {
 
         inputDirection = ctx.ReadValue<Vector2>();
-       
+
         //人物翻转
          faceDirection = (int)transform.localScale.x;
         if (inputDirection.x < 0)
@@ -76,7 +79,8 @@ public class playerController : MonoBehaviour
     }
     public void Down(InputAction.CallbackContext obj)
     {
-        if (playerAttribution.isPlatform&&obj.performed)
+
+        if (playerAttribution.isPlatform && obj.performed)
         {
             gameObject.layer = LayerMask.NameToLayer("Platform");
             Invoke("Recovery", recoveryTime);
@@ -118,10 +122,11 @@ public class playerController : MonoBehaviour
         if (obj.performed)
         {
             isDefend = true;
+            DefendEvent?.Invoke();
             playerAnimation.PlayerDefend();
         }
     }
 }
-    // Update is called once per frame
+// Update is called once per frame
 
 
