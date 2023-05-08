@@ -129,6 +129,6 @@ public class ArmourController : MonoBehaviour
     public void WeaponsDrops(Transform transform)
     {
         SetWeapon("empty");
-        WeaponManager.Instance.InstantiateWeapon(PlayerWeapon, transform);
+        WeaponManager.Instance.InstantiateDropWeapon(PlayerWeapon, transform);
     }
 }

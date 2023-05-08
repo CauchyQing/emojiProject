@@ -28,16 +28,18 @@ public class Attack : MonoBehaviour
         // controller = GetComponentInParent<playerController>();
         controller = this.transform.parent.GetComponent<playerController>();
     }
-    private void OnTriggerStay2D(Collider2D other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("pengzhuang");
          other.GetComponent<playerAttribution>().TakeDamage(this, pa.state);
         //other.GetComponent<playerAttribution>().TakeDamage(this, GetComponent<playerAttribution>().state);
 
     }
+    
     // Start is called before the first frame update
-   
+
 
     // Update is called once per frame
-    
+
 }
