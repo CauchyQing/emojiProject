@@ -17,13 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: da92aea9a919b7f43ae4fd76b82f63ca
   m_SerializeEntries:
-  - m_GUID: 8c9cfa26abfee488c85f1582747f6a02
-    m_Address: Red Gate
+  - m_GUID: c4ba9b21b2f26ef4e917e45d1482f7a0
+    m_Address: Castle
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c4ba9b21b2f26ef4e917e45d1482f7a0
-    m_Address: Castle
+  - m_GUID: 8c9cfa26abfee488c85f1582747f6a02
+    m_Address: Red Gate
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
