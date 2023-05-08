@@ -32,11 +32,14 @@ public class WeaponManager : Singleton<WeaponManager>
 
     public void InstantiateDropWeapon(string WeaponName, Transform transform)
     {
+        Debug.Log("!!!DropWeapon!!!");
         foreach(GameObject prefab in weaponPrefabs)
         {
             if(prefab.GetComponent<WeaponAttri>().GetWeaponName() == WeaponName)
             {
-                var instance = Instantiate(prefab, transform);
+                Debug.Log("!!!DropWeapon------>Weaponname" + WeaponName);
+
+                var instance = Instantiate(prefab, transform.position,transform.rotation);
                 instance.GetComponent<Collider2D>().enabled = false;
                 StartCoroutine(CanNotTakeWeapon(instance));
                 weaponCount++;
