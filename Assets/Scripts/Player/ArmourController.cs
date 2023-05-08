@@ -128,7 +128,7 @@ public class ArmourController : MonoBehaviour
     /*武器掉落，需传入掉落武器的Transform*/
     public void WeaponsDrops(Transform transform)
     {
+        WeaponManager.Instance.InstantiateDropWeapon(PlayerWeapon, transform);
         SetWeapon("empty");
-        WeaponManager.Instance.InstantiateWeapon(PlayerWeapon, transform);
     }
 }
