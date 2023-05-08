@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
   - component: {fileID: 6912029452503621537}
+  - component: {fileID: 9204998679236203828}
   m_Layer: 0
   m_Name: Emoji-Character
   m_TagString: Player
@@ -652,7 +653,7 @@ CapsuleCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 10
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1051,6 +1052,24 @@ MonoBehaviour:
   m_DefaultActionMap: GamePlay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &9204998679236203828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620094325498275643}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa91e25e9a86e894b8984dca67521617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  attackForce: 0
+  tf: {fileID: 0}
+  parent: {fileID: 0}
+  pa: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1 &5712659595385472992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,14 +1255,14 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0004473, y: 0.060945332}
+  m_Offset: {x: 3.0602715, y: 0.060945332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1254,7 +1273,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9379225, y: 1.5083145}
+  m_Size: {x: 2.818286, y: 1.5083145}
   m_EdgeRadius: 0
 --- !u!114 &3667995830995368585
 MonoBehaviour:

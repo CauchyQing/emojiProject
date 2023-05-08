@@ -35,7 +35,7 @@ public class playerAttribution : MonoBehaviour
         NORMALATTACK,
         ACCUMULATEATTACK
     }
-    public STATE state;
+    public STATE state=STATE.NOTHING;
 
     private void Update()
     {
@@ -77,44 +77,46 @@ public class playerAttribution : MonoBehaviour
         pc=GetComponent<playerController>();
     }
 
-    public void TakeDamage(Attack attacker,STATE s)
+    public void TakeDamage(Attack attacker, STATE s)
     {
 
-        if (s==STATE.NORMALATTACK) {
+        if (s == STATE.NORMALATTACK)
+        {
             TakeDamageHelp(attacker, 1);
-            
+
         }
-       else if(s==STATE.ACCUMULATEATTACK && state != STATE.DEFEND) {
+        else if (s == STATE.ACCUMULATEATTACK && state != STATE.DEFEND)
+        {
             TakeDamageHelp(attacker, (float)1.5);
         }
-        
-        else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
-        {
-            attacker.pa.currentHealth -= attacker.damage*2;
-            OnTakeDamage?.Invoke(this.transform);
-            OnTakeDamage?.Invoke(this.transform);
 
-            if (attacker.pa.currentHealth <= 0)
-            {
-                attacker.pa.currentHealth = 0;
-                attacker.pa.Ondie?.Invoke();
-                attacker.pa.rb.AddForce(attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
-                if (attacker.tf.position.x < transform.position.x)
-                    attacker.pa.rb.AddForce(transform.right * attacker.attackForce * 5 , ForceMode2D.Impulse);
-                else
-                    attacker.pa.rb.AddForce(-1 * transform.right * attacker.attackForce * 5 , ForceMode2D.Impulse);
-                attacker.pa.anim.PlayerHurt();
-            }
-            else
-            {
-                attacker.pa.rb.AddForce(attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
-                if (attacker.tf.position.x < transform.position.x)
-                    attacker.pa.rb.AddForce(attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
-                else
-                    attacker.pa.rb.AddForce(-1 * attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
-                attacker.pa.anim.PlayerHurt();
-            }
-        }
+        /* else if(s==STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
+         {
+             attacker.pa.currentHealth -= attacker.damage*2;
+             OnTakeDamage?.Invoke(this.transform);
+             OnTakeDamage?.Invoke(this.transform);
+
+             if (attacker.pa.currentHealth <= 0)
+             {
+                 attacker.pa.currentHealth = 0;
+                 attacker.pa.Ondie?.Invoke();
+                 attacker.pa.rb.AddForce(attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
+                 if (attacker.tf.position.x < transform.position.x)
+                     attacker.pa.rb.AddForce(transform.right * attacker.attackForce * 5 , ForceMode2D.Impulse);
+                 else
+                     attacker.pa.rb.AddForce(-1 * transform.right * attacker.attackForce * 5 , ForceMode2D.Impulse);
+                 attacker.pa.anim.PlayerHurt();
+             }
+             else
+             {
+                 attacker.pa.rb.AddForce(attacker.pa.transform.up * attacker.attackForce , ForceMode2D.Impulse);
+                 if (attacker.tf.position.x < transform.position.x)
+                     attacker.pa.rb.AddForce(attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
+                 else
+                     attacker.pa.rb.AddForce(-1 * attacker.pa.transform.right * attacker.attackForce , ForceMode2D.Impulse);
+                 attacker.pa.anim.PlayerHurt();
+             }
+         }*/
 
     }
 
