@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa91e25e9a86e894b8984dca67521617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 10
   attackForce: 5
   tf: {fileID: 6716714051726491480}
   parent: {fileID: 0}
