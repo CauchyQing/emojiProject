@@ -94,7 +94,7 @@ public class playerAttribution : MonoBehaviour
          {
              attacker.pa.currentHealth -= attacker.damage*2;
              OnTakeDamage?.Invoke(this.transform);
-             OnTakeDamage?.Invoke(this.transform);
+             
             attacker.pa.GetComponent<ArmourController>().WeaponsDrops(attacker.tf);
              if (attacker.pa.currentHealth <= 0)
              {
