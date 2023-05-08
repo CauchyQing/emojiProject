@@ -21,6 +21,8 @@ public class playerAttribution : MonoBehaviour
     public UnityEvent Ondie;        //死亡事件
     public UnityEvent SuccessDefend;        //振刀成功
 
+
+
     [Header("检测参数")]
     public float checkRaduis;
     public Vector2 bottomOffset;
@@ -28,9 +30,9 @@ public class playerAttribution : MonoBehaviour
     public LayerMask platformLayer;//平台检测层
     public bool isGround;
     public bool isPlatform;//判断是否在平台
+    public float damageMultiplier = 1;
 
-    public enum STATE
-    {
+    public enum STATE { 
         NOTHING,
         DEFEND,
         NORMALATTACK,
@@ -83,12 +85,12 @@ public class playerAttribution : MonoBehaviour
 
         if (s == STATE.NORMALATTACK)
         {
-            TakeDamageHelp(attacker, 1);
+            TakeDamageHelp(attacker, damageMultiplier);
 
         }
         else if (s == STATE.ACCUMULATEATTACK && state != STATE.DEFEND)
         {
-            TakeDamageHelp(attacker, (float)1.5);
+            TakeDamageHelp(attacker, (float)(damageMultiplier*1.5));
         }
 
         else if (s == STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
@@ -146,6 +148,16 @@ public class playerAttribution : MonoBehaviour
             else
                 rb.AddForce(-1 * transform.right * attacker.attackForce * x, ForceMode2D.Impulse);
 
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("BUFF");
+        if (collision.gameObject.layer == LayerMask.NameToLayer("DamageBuff"))
+        {
+            damageMultiplier +=(float)0.2;
+            Destroy(collision.gameObject);
+         
         }
     }
 
