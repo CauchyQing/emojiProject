@@ -36,8 +36,7 @@ public class WeaponManager : Singleton<WeaponManager>
         {
             if(prefab.GetComponent<WeaponAttri>().GetWeaponName() == WeaponName)
             {
-                var instance = GameObject.Instantiate(prefab, transform);
-                instance.SetActive(true);
+                var instance = Instantiate(prefab, transform);
                 weaponCount++;
                 break;
             }
