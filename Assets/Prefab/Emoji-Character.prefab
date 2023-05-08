@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
-  attackForce: 2
+  attackForce: 5
   tf: {fileID: 6716714051726491480}
   parent: {fileID: 0}
   pa: {fileID: 0}
