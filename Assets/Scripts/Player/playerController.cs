@@ -122,7 +122,7 @@ public class playerController : MonoBehaviour
         if (obj.performed)
         {
             isDefend = true;
-          //  DefendEvent?.Invoke();
+            DefendEvent?.Invoke();
             playerAnimation.PlayerDefend();
         }
     }
