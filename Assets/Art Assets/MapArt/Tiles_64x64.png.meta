@@ -887,10 +887,10 @@ TextureImporter:
       name: could-1
       rect:
         serializedVersion: 2
-        x: 319
+        x: 321
         y: 193
-        width: 66
-        height: 63
+        width: 64
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 3, y: 0, z: 0, w: 0}
