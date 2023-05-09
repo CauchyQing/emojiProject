@@ -818,6 +818,7 @@ MonoBehaviour:
     m_Bits: 64
   isGround: 0
   isPlatform: 0
+  damageMultiplier: 1
   state: 0
 --- !u!114 &2061278187762573184
 MonoBehaviour:
@@ -833,6 +834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimation: {fileID: 0}
   inputDirection: {x: 0, y: 0}
+  faceDirection: 0
   speed: 10
   jumpForce: 25
   isNormalAttack: 0
@@ -1088,6 +1090,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 392c3dcd-bfed-4972-a35d-363c68ff2b2c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2061278187762573184}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4ad729ac-a541-48cf-8153-0b5496150cdf
+    m_ActionName: GamePlay/ChangeWeapon[/Keyboard/w]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay

@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
+using UnityEngine.InputSystem;
 
 public class ArmourController : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class ArmourController : MonoBehaviour
     private playerController playerController;
 
     public Animator animator;
-    public AnimatorOverrideController overrideController;
+    public AnimatorOverrideController EmptyController;
     public RuntimeAnimatorController originalContorller;
 
     private void Start()
@@ -99,12 +100,43 @@ public class ArmourController : MonoBehaviour
         RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+
+    //    if (other.gameObject.CompareTag("Weapon") && PlayerWeapon == "empty")
+    //    {
+    //        SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
+    //        Destroy(other.gameObject);
+    //    }
+    //}
+
+    private List<Collider2D> otherWeapons;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Weapon") && PlayerWeapon == "empty")
+        if (other.gameObject.CompareTag("Weapon")){
+            otherWeapons.Add(other);
+        }
+        //if (other.gameObject.CompareTag("Weapon") && )
+        //{
+        //    SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
+        //    Destroy(other.gameObject);
+        //}
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Weapon"))
         {
-            SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
-            Destroy(other.gameObject);
+            otherWeapons.Remove(other);
+        }
+    }
+    public void ChageWeapon(InputAction.CallbackContext obj)
+    {
+        if (obj.performed && (otherWeapons.Count != 0))
+        {
+            var coll = otherWeapons[0];
+            SetWeapon(coll.GetComponent<WeaponAttri>().GetWeaponName());
+            Destroy(coll.gameObject);
+            otherWeapons.Remove(coll);
         }
     }
 
@@ -113,7 +145,7 @@ public class ArmourController : MonoBehaviour
         if (PlayerWeapon == "empty" && playerController.isNormalAttack)
         {
             //originalContorller = animator.runtimeAnimatorController;
-            animator.runtimeAnimatorController = overrideController;
+            animator.runtimeAnimatorController = EmptyController;
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "riot");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "riot");
         }
@@ -123,6 +155,7 @@ public class ArmourController : MonoBehaviour
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "hand");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "hand");
         }
+
     }
 
     /*ÎäÆ÷µôÂä£¬Ðè´«ÈëµôÂäÎäÆ÷µÄTransform*/
@@ -131,4 +164,5 @@ public class ArmourController : MonoBehaviour
         WeaponManager.Instance.InstantiateDropWeapon(PlayerWeapon, transform);
         SetWeapon("empty");
     }
+
 }
