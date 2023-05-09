@@ -793,6 +793,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  SuccessDefend:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+        m_TargetAssemblyTypeName: PlayAudioEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: a61ff2f31c611094cb6c3e9ab3db51b8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
@@ -803,6 +818,7 @@ MonoBehaviour:
     m_Bits: 64
   isGround: 0
   isPlatform: 0
+  damageMultiplier: 1
   state: 0
 --- !u!114 &2061278187762573184
 MonoBehaviour:
@@ -818,12 +834,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimation: {fileID: 0}
   inputDirection: {x: 0, y: 0}
+  faceDirection: 0
   speed: 10
   jumpForce: 25
   isNormalAttack: 0
   isAccumulate: 0
   isDefend: 0
   recoveryTime: 0.3
+  DefendEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+        m_TargetAssemblyTypeName: PlayAudioEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 90c32278ccfe6ec488302a37be580ea4, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7462130854528619003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,6 +1090,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 392c3dcd-bfed-4972-a35d-363c68ff2b2c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2061278187762573184}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4ad729ac-a541-48cf-8153-0b5496150cdf
+    m_ActionName: GamePlay/ChangeWeapon[/Keyboard/w]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay
@@ -1280,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa91e25e9a86e894b8984dca67521617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 10
   attackForce: 5
   tf: {fileID: 6716714051726491480}
   parent: {fileID: 0}
