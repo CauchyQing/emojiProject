@@ -21,16 +21,19 @@ public class Spike : MonoBehaviour
     {
         Debug.Log("spike");
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
 
-            //collision.gameObject.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
 
 
-            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1) * force, ForceMode2D.Impulse);
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(gameObject.GetComponent<Transform>().localScale.x, -1) * force * (-1), ForceMode2D.Impulse);
+            if(collision.gameObject.GetComponent<playerController>().faceDirection>0)
+          collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1, 1) * force , ForceMode2D.Impulse);
+            else
+           collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1, 1) * force, ForceMode2D.Impulse);
 
+
+            collision.gameObject.GetComponent<playerAnimation>().PlayerHurt();//调用受击动画
         }
     }
 }
