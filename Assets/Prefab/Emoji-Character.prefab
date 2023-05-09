@@ -894,6 +894,7 @@ MonoBehaviour:
   spriteLibrary: {fileID: 0}
   PlayerWeapon: empty
   animator: {fileID: 3415477207734184350}
+  GuitarController: {fileID: 22100000, guid: 321b84b70106b8f4ba8abe2eceda4aed, type: 2}
   EmptyController: {fileID: 22100000, guid: 4acf929775bbf22419ae9fa0867adfe9, type: 2}
   originalContorller: {fileID: 9100000, guid: 229a50584fa27ad4eb1339678481b318, type: 2}
 --- !u!114 &4409306863424732715

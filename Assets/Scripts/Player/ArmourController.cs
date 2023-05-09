@@ -37,8 +37,10 @@ public class ArmourController : MonoBehaviour
     private playerController playerController;
 
     public Animator animator;
+    public AnimatorOverrideController GuitarController;
     public AnimatorOverrideController EmptyController;
     public RuntimeAnimatorController originalContorller;
+
 
     private void Start()
     {
@@ -76,6 +78,7 @@ public class ArmourController : MonoBehaviour
         {
             Weapon.SetCategoryAndLabel(Weapon.GetCategory(), WeaponLabel);
             PlayerWeapon = WeaponLabel;
+            UpdateAnimtorContoller();
         }
     }
 
@@ -153,13 +156,12 @@ public class ArmourController : MonoBehaviour
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "riot");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "riot");
         }
-        else
+        else if(RHand.GetCategory() != "hand")
         {
-            animator.runtimeAnimatorController = originalContorller;
+            UpdateAnimtorContoller();
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "hand");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "hand");
         }
-
     }
 
     /*ÎäÆ÷µôÂä£¬Ðè´«ÈëµôÂäÎäÆ÷µÄTransform*/
@@ -169,4 +171,21 @@ public class ArmourController : MonoBehaviour
         SetWeapon("empty");
     }
 
+    private void UpdateAnimtorContoller()
+    {
+        Debug.Log("Plyer Weapon----> " + PlayerWeapon);
+        if (PlayerWeapon == "guitar")
+        {
+        Debug.Log("Update Controller----> " + PlayerWeapon);
+            Debug.Log(animator.runtimeAnimatorController);
+
+            animator.runtimeAnimatorController = GuitarController;
+        }
+        else
+        {
+            Debug.Log("Update Controller----> " + PlayerWeapon);
+
+            animator.runtimeAnimatorController = originalContorller;
+        }
+    }
 }

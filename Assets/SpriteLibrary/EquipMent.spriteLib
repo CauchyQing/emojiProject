@@ -58,8 +58,18 @@ MonoBehaviour:
       m_Sprite: {fileID: 9028723739412666752, guid: b6d543bd6aa8252498ade803922c835c, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 9028723739412666752, guid: b6d543bd6aa8252498ade803922c835c, type: 3}
+    - m_Name: pickaxe
+      m_Hash: 1063381862
+      m_Sprite: {fileID: 5610607622654370353, guid: e5da4f72f96f89648bfb6acb599d4ab4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5610607622654370353, guid: e5da4f72f96f89648bfb6acb599d4ab4, type: 3}
+    - m_Name: guitar
+      m_Hash: 37405453
+      m_Sprite: {fileID: 5811240293881657595, guid: bc76f193dc324e54f84568c3f9e6f855, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5811240293881657595, guid: bc76f193dc324e54f84568c3f9e6f855, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 6
   - m_Name: RShoe
     m_Hash: 70300637
     m_CategoryList: []
@@ -79,8 +89,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 8948210964320834215, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 8948210964320834215, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+    - m_Name: slipper
+      m_Hash: 850888939
+      m_Sprite: {fileID: -1870298370676638443, guid: 96a79d3e74aa59145b5e00709bd91869, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1870298370676638443, guid: 96a79d3e74aa59145b5e00709bd91869, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 4
   - m_Name: LShoe
     m_Hash: 467704382
     m_CategoryList: []
@@ -100,8 +115,13 @@ MonoBehaviour:
       m_Sprite: {fileID: 1562685587428151098, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 1562685587428151098, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+    - m_Name: slipper
+      m_Hash: 850888939
+      m_Sprite: {fileID: 6764858335322309297, guid: 96a79d3e74aa59145b5e00709bd91869, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6764858335322309297, guid: 96a79d3e74aa59145b5e00709bd91869, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 4
   - m_Name: LHand
     m_Hash: 1026912504
     m_CategoryList: []
@@ -135,5 +155,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638178840677183273
+  m_ModificationHash: 638193307032770735
   m_Version: 1
