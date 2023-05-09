@@ -101,8 +101,9 @@ public class playerAttribution : MonoBehaviour
             attacker.pa.GetComponent<ArmourController>().WeaponsDrops(attacker.pa.transform);
             if (attacker.pa.currentHealth <= 0)
             {
+               
                 attacker.pa.currentHealth = 0;
-                attacker.pa.Ondie?.Invoke();
+               // attacker.pa.Ondie?.Invoke();
                 attacker.pa.rb.AddForce(2 * attacker.pa.transform.up * attacker.attackForce, ForceMode2D.Impulse);
                 if (attacker.tf.position.x < transform.position.x)
                     attacker.pa.rb.AddForce(-1 * transform.right * attacker.attackForce * 5, ForceMode2D.Impulse);
@@ -130,14 +131,18 @@ public class playerAttribution : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+
+            
             currentHealth = 0;
-            Ondie?.Invoke();
-            rb.AddForce(2 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
+            gameObject.layer = LayerMask.NameToLayer("Default");
+
+            //Ondie?.Invoke();
+            rb.AddForce(5 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             anim.PlayerHurt();
             if (attacker.tf.position.x < transform.position.x)
-                rb.AddForce(transform.right * attacker.attackForce * 5 * x, ForceMode2D.Impulse);
+                rb.AddForce(transform.right * attacker.attackForce * 10 * x, ForceMode2D.Impulse);
             else
-                rb.AddForce(-1 * transform.right * attacker.attackForce * 5 * x, ForceMode2D.Impulse);
+                rb.AddForce(-1 * transform.right * attacker.attackForce * 10 * x, ForceMode2D.Impulse);
 
         }
         else
@@ -162,8 +167,10 @@ public class playerAttribution : MonoBehaviour
       
         if (collision.gameObject.layer == LayerMask.NameToLayer("BackGround"))
         {
+            GetComponent<Transform>().tag = "Untagged";//将角色标签改为Untagged;
             Debug.Log("disappear");
-            Destroy(gameObject);
+
+            gameObject.SetActive(false);
         }
 
 
