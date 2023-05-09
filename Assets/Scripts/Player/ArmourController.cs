@@ -110,7 +110,7 @@ public class ArmourController : MonoBehaviour
     //    }
     //}
 
-    private List<Collider2D> otherWeapons;
+    private List<Collider2D> otherWeapons = new List<Collider2D>();
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Weapon")){
@@ -133,6 +133,10 @@ public class ArmourController : MonoBehaviour
     {
         if (obj.performed && (otherWeapons.Count != 0))
         {
+            if(PlayerWeapon != "empty")
+            {
+                WeaponsDrops(transform);
+            }
             var coll = otherWeapons[0];
             SetWeapon(coll.GetComponent<WeaponAttri>().GetWeaponName());
             Destroy(coll.gameObject);

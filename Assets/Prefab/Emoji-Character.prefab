@@ -894,7 +894,7 @@ MonoBehaviour:
   spriteLibrary: {fileID: 0}
   PlayerWeapon: empty
   animator: {fileID: 3415477207734184350}
-  overrideController: {fileID: 22100000, guid: 4acf929775bbf22419ae9fa0867adfe9, type: 2}
+  EmptyController: {fileID: 0}
   originalContorller: {fileID: 9100000, guid: 229a50584fa27ad4eb1339678481b318, type: 2}
 --- !u!114 &4409306863424732715
 MonoBehaviour:
@@ -1092,13 +1092,13 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2061278187762573184}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 7196787824306238943}
+        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
+        m_MethodName: ChageWeapon
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
