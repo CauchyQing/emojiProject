@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,17 +108,13 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape:
-    - - {x: -640, y: 349}
-      - {x: -640, y: 360}
-      - {x: 640, y: 360}
-      - {x: 640, y: 350}
     - - {x: -640, y: -360}
-      - {x: -640, y: 348}
-      - {x: -630, y: 354}
+      - {x: -640, y: 334}
+      - {x: -629, y: 333}
       - {x: -628, y: -360}
     - - {x: 633, y: -360}
-      - {x: 632, y: 348}
-      - {x: 640, y: 348}
+      - {x: 630, y: 330}
+      - {x: 640, y: 329}
       - {x: 640, y: -360}
     - - {x: -640, y: -360}
       - {x: -640, y: -342}
