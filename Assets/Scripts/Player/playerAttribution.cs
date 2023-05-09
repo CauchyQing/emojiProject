@@ -152,14 +152,21 @@ public class playerAttribution : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("BUFF");
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("DamageBuff"))
         {
             damageMultiplier +=(float)0.2;
             Destroy(collision.gameObject);
-         
-        }
-    }
 
+        }
+      
+        if (collision.gameObject.layer == LayerMask.NameToLayer("BackGround"))
+        {
+            Debug.Log("disappear");
+            Destroy(gameObject);
+        }
+
+
+    }
 
 }

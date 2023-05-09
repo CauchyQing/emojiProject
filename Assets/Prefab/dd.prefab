@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 1551013433315223643}
   - component: {fileID: 6912029452503621537}
   m_Layer: 3
-  m_Name: Emoji-Character
+  m_Name: dd
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
