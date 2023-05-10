@@ -45,13 +45,10 @@ public class playerAttribution : MonoBehaviour
     {
         Check();
         updateSTATE();
-        updateTransform();
+      
 
     }
-    public void updateTransform()
-    {
-        playerTransform = gameObject.GetComponent<Transform>();
-    }
+  
     public void updateSTATE()
     {
         if (pc.isDefend)
@@ -70,7 +67,6 @@ public class playerAttribution : MonoBehaviour
     {
         isGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, groundLayer);
         isPlatform = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, platformLayer);
-
     }
 
     private void OnDrawGizmosSelected()
@@ -184,7 +180,7 @@ public class playerAttribution : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("MC");
-        if (collision.gameObject.layer== LayerMask.NameToLayer("MovingPlatform")&&isGround)
+        if (collision.gameObject.layer== LayerMask.NameToLayer("MovingPlatform"))
         {
             Debug.Log("MC0");
            
@@ -195,7 +191,7 @@ public class playerAttribution : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("OUT MC");
-        gameObject.transform.parent = playerTransform;
+        gameObject.transform.SetParent(null);
 
 
 
