@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
-
+using UnityEngine.InputSystem;
 public class ArmourController : MonoBehaviour
 {
     //public List<SpriteResolver> spriteResolvers = new List<SpriteResolver>();
@@ -24,7 +24,6 @@ public class ArmourController : MonoBehaviour
     private SpriteResolver LShoe;
     private SpriteResolver RHand;
     private SpriteResolver LHand;
-
     private int FaceIndex = 0;
     private int ShoeIndex = 0;
 
@@ -78,14 +77,18 @@ public class ArmourController : MonoBehaviour
         }
     }
 
-    public void NextFace()
+    public void NextFace(InputAction.CallbackContext ctx)
     {
-        FaceIndex += 1;
-        if (FaceIndex >= FaceLabels.Count)
+        if (ctx.performed)
         {
-            FaceIndex = 0;
+            FaceIndex += 1;
+            if (FaceIndex >= FaceLabels.Count)
+            {
+                FaceIndex = 0;
+            }
+            Face.SetCategoryAndLabel(Face.GetCategory(), FaceLabels[FaceIndex]);
+            Debug.Log("ssssss");
         }
-        Face.SetCategoryAndLabel(Face.GetCategory(), FaceLabels[FaceIndex]);
     }
 
     public void NextShoe()
@@ -97,6 +100,7 @@ public class ArmourController : MonoBehaviour
         }
         LShoe.SetCategoryAndLabel(LShoe.GetCategory(), ShoeLabels[ShoeIndex]);
         RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
+        Debug.Log("ssssss");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -123,6 +127,7 @@ public class ArmourController : MonoBehaviour
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "hand");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "hand");
         }
+        
     }
 
     /*ÎäÆ÷µôÂä£¬Ðè´«ÈëµôÂäÎäÆ÷µÄTransform*/

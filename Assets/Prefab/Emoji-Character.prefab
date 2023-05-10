@@ -606,6 +606,7 @@ GameObject:
   - component: {fileID: 7196787824306238943}
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
+  - component: {fileID: 6912029452503621537}
   m_Layer: 0
   m_Name: Emoji-Character
   m_TagString: Player
@@ -1022,7 +1023,19 @@ MonoBehaviour:
     m_ActionId: 9722a529-850c-47f0-b3e5-cbdf486d7718
     m_ActionName: UI/Point[/Mouse/position]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 881b6059-1201-48a1-aa93-ed5566d50611
     m_ActionName: UI/Click[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -1045,9 +1058,25 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 392c3dcd-bfed-4972-a35d-363c68ff2b2c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7196787824306238943}
+        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
+        m_MethodName: NextFace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1ad8a4bf-2c04-45ac-be44-a46facd6dd34
+    m_ActionName: UI/changeFace[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: GamePlay
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &5712659595385472992
@@ -1379,7 +1408,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 6435770992328516628, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+  m_Sprite: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1425,7 +1454,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 988905796
+  m_SpriteHash: 800671159
 --- !u!1 &7420712113309282252
 GameObject:
   m_ObjectHideFlags: 0

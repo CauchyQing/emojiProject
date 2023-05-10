@@ -169,7 +169,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 130690827
+  m_SpriteHash: 748326107
 --- !u!1001 &975217349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 1618703178}
     - target: {fileID: -7552582706839291426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_LocalPosition.x
@@ -249,7 +249,7 @@ PrefabInstance:
     - target: {fileID: -7193929806420029068, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4301374623137910426, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      objectReference: {fileID: 3121086227422584395, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
     - target: {fileID: -4648084605813163107, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_BoneTransforms.Array.size
       value: 1
@@ -269,7 +269,7 @@ PrefabInstance:
     - target: {fileID: -1621988687639570432, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8720642767821748557, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+      objectReference: {fileID: -205570085370179118, guid: 2aeb66d5a0f37b94c88be01dd35b087c, type: 3}
     - target: {fileID: -1621988687639570432, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -388,6 +388,10 @@ MonoBehaviour:
   - sneaker
   - leather
   spriteLibrary: {fileID: 0}
+  PlayerWeapon: weapon
+  animator: {fileID: 0}
+  overrideController: {fileID: 0}
+  originalContorller: {fileID: 0}
 --- !u!1 &1054412475
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,12 +553,63 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 153847137
+  m_SpriteHash: 578496177
 --- !u!4 &1618703178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2114717017327982363, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
   m_PrefabInstance: {fileID: 975217349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1643011975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643011976}
+  - component: {fileID: 1643011977}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643011976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643011975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643011977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643011975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca517b5ab82f4ff48adfdb7f877de0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FaceLabels: []
+  ShoeLabels: []
+  spriteLibrary: {fileID: 0}
+  PlayerWeapon: weapon
+  animator: {fileID: 0}
+  overrideController: {fileID: 0}
+  originalContorller: {fileID: 0}
 --- !u!1 &2097123635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3398230403886344883, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
