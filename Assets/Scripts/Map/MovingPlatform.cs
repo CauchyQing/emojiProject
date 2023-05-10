@@ -11,7 +11,6 @@ public class MovingPlatform : MonoBehaviour
     public Transform[] movePos;//
 
     private int dir;
-    private Transform playerTransform;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,21 +43,5 @@ public class MovingPlatform : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("MC");
-        if (collision.gameObject.layer== LayerMask.NameToLayer("Player")&&collision.gameObject.GetComponent<playerAttribution>().isGround)
-        {
-            playerTransform = collision.gameObject.GetComponent<Transform>();
-            collision.gameObject.transform.SetParent(transform);
-        }
-    }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-        collision.gameObject.transform.parent = playerTransform;
-
-
-    }
 }
