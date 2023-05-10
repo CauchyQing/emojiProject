@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 361783202}
   - component: {fileID: 361783204}
   - component: {fileID: 361783205}
-  - component: {fileID: 361783206}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -186,25 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01b94d36f0925145a8b41c8198c6875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &361783206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361783200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca517b5ab82f4ff48adfdb7f877de0d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FaceLabels: []
-  ShoeLabels: []
-  spriteLibrary: {fileID: 0}
-  PlayerWeapon: weapon
-  animator: {fileID: 0}
-  overrideController: {fileID: 0}
-  originalContorller: {fileID: 0}
 --- !u!1 &608782771
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1089615227
 AudioListener:
   m_ObjectHideFlags: 0
@@ -573,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1436613567
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
   - component: {fileID: 6912029452503621537}
+  - component: {fileID: 7037921289865438601}
   m_Layer: 3
   m_Name: Emoji-Character
   m_TagString: Player
@@ -1080,14 +1081,55 @@ MonoBehaviour:
     m_ActionId: 4ad729ac-a541-48cf-8153-0b5496150cdf
     m_ActionName: GamePlay/ChangeWeapon[/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7196787824306238943}
+        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
+        m_MethodName: NextShoe
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3a4b09b0-4de5-4c76-ac07-c4eb03266bc3
     m_ActionName: UI/RIGHT[/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7196787824306238943}
+        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
+        m_MethodName: NextFace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1ad8a4bf-2c04-45ac-be44-a46facd6dd34
+    m_ActionName: UI/changeFace[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7037921289865438601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620094325498275643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1c7eaa52e340344ba0b0824af39bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armourController: {fileID: 7196787824306238943}
 --- !u!1 &5712659595385472992
 GameObject:
   m_ObjectHideFlags: 0

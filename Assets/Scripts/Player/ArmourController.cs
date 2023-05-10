@@ -12,7 +12,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.InputSystem;
-
 public class ArmourController : MonoBehaviour
 {
     //public List<SpriteResolver> spriteResolvers = new List<SpriteResolver>();
@@ -40,7 +39,10 @@ public class ArmourController : MonoBehaviour
     public AnimatorOverrideController EmptyController;
     public RuntimeAnimatorController originalContorller;
 
-
+    private void Awake()
+    {
+        
+    }
     private void Start()
     {
         spriteLibrary = GetComponent<SpriteLibrary>();
@@ -95,16 +97,19 @@ public class ArmourController : MonoBehaviour
         }
     }
 
-    public void NextShoe()
+    public void NextShoe(InputAction.CallbackContext ctx)
     {
-        ShoeIndex += 1;
-        if (ShoeIndex >= ShoeLabels.Count)
+        if (ctx.performed)
         {
-            ShoeIndex = 0;
+            ShoeIndex += 1;
+            if (ShoeIndex >= ShoeLabels.Count)
+            {
+                ShoeIndex = 0;
+            }
+            LShoe.SetCategoryAndLabel(LShoe.GetCategory(), ShoeLabels[ShoeIndex]);
+            RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
+            Debug.Log("ssssss");
         }
-        LShoe.SetCategoryAndLabel(LShoe.GetCategory(), ShoeLabels[ShoeIndex]);
-        RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
-        Debug.Log("ssssss");
     }
 
     //void OnTriggerEnter2D(Collider2D other)

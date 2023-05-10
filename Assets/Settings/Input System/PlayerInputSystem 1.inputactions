@@ -421,7 +421,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "RIGHT",
+                    "name": "changeShoe",
                     "type": "Button",
                     "id": "3a4b09b0-4de5-4c76-ac07-c4eb03266bc3",
                     "expectedControlType": "Button",
@@ -663,22 +663,11 @@
                 {
                     "name": "",
                     "id": "fa18db03-4e46-4bda-aaf6-b30e551be8b6",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RIGHT",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bdc5268f-1979-49c6-8630-ab838417623b",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RIGHT",
+                    "action": "changeShoe",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
