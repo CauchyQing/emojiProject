@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -10,14 +11,12 @@ public class MovingPlatform : MonoBehaviour
     public Transform[] movePos;//
 
     private int dir;
-    private GameObject player;
-    private Transform playerTransform;
     // Start is called before the first frame update
     void Start()
     {
         dir = 1;
-        player = GameObject.Find("Emoji-Character");
-        playerTransform = player.transform.parent;
+   
+      
     }
 
     // Update is called once per frame
@@ -44,20 +43,5 @@ public class MovingPlatform : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (player.GetComponent<playerAttribution>().isGround)
-        {
 
-            collision.gameObject.transform.SetParent(transform);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-        collision.gameObject.transform.parent = playerTransform;
-
-
-    }
 }

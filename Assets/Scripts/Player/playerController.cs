@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private playerAttribution playerAttribution;
+    private ArmourController armourController;
 
     public playerAnimation playerAnimation;
     public Vector2 inputDirection;
@@ -28,6 +29,7 @@ public class playerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerAttribution = GetComponent<playerAttribution>();
         playerAnimation = GetComponent<playerAnimation>();
+        armourController = GetComponent<ArmourController>();
     }
 
 
@@ -50,7 +52,7 @@ public class playerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-
+        if(!playerAttribution.isHurt) { 
         inputDirection = ctx.ReadValue<Vector2>();
 
         //ÈËÎï·­×ª
@@ -67,11 +69,11 @@ public class playerController : MonoBehaviour
 
         transform.localScale = new Vector3(faceDirection, 1, 1);
     }
-
+    }
     public void Jump(InputAction.CallbackContext obj)
     {
         Debug.Log("jump");
-        if (playerAttribution.isGround && obj.performed)
+        if (playerAttribution.isGround && obj.performed&& !playerAttribution.isHurt)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             GetComponent<AudioDefination>()?.PlayAudioClip();
@@ -80,7 +82,7 @@ public class playerController : MonoBehaviour
     public void Down(InputAction.CallbackContext obj)
     {
 
-        if (playerAttribution.isPlatform && obj.performed)
+        if (playerAttribution.isPlatform && obj.performed&& !playerAttribution.isHurt)
         {
             gameObject.layer = LayerMask.NameToLayer("Platform");
             Invoke("Recovery", recoveryTime);
@@ -95,7 +97,7 @@ public class playerController : MonoBehaviour
 
     public void NormalAttack(InputAction.CallbackContext obj)
     {
-        if (obj.performed)
+        if (obj.performed&& !playerAttribution.isHurt)
         {
             isNormalAttack = true;
             playerAnimation.PlayerNormalAttack();
@@ -106,8 +108,8 @@ public class playerController : MonoBehaviour
 
     public void AccumulateAttack(InputAction.CallbackContext obj)
     {
-        if (obj.performed) { isAccumulate = true; }
-        if (obj.canceled)
+        if (obj.performed&&armourController.PlayerWeapon!= "empty"&& !playerAttribution.isHurt) { isAccumulate = true; }
+        if (obj.canceled && armourController.PlayerWeapon != "empty" && !playerAttribution.isHurt)
         {
             playerAnimation.PlayerAccumulate();
             playerAttribution.OnAttack?.Invoke(playerAttribution);
@@ -119,7 +121,7 @@ public class playerController : MonoBehaviour
 
     public void Defend(InputAction.CallbackContext obj)
     {
-        if (obj.performed)
+        if (obj.performed && armourController.PlayerWeapon != "empty" && !playerAttribution.isHurt)
         {
             isDefend = true;
             DefendEvent?.Invoke();

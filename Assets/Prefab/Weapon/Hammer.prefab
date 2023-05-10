@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3554347803650388972}
   - component: {fileID: 7984746869815971468}
   - component: {fileID: 1917284938637952315}
-  - component: {fileID: 4148805283844422759}
   - component: {fileID: 7189069258822106563}
   - component: {fileID: 7203297321189539981}
   m_Layer: 0
@@ -35,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 6760979774653356598}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &7984746869815971468
 PolygonCollider2D:
@@ -106,27 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: hammer
---- !u!95 &4148805283844422759
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065876498536233484}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: edcdb6972c3b37240a453179c0051426, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &7189069258822106563
 Rigidbody2D:
   serializedVersion: 4
