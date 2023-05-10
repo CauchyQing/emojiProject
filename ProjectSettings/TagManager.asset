@@ -5,18 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bounds
+  - Weapon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Platform
   - Ground
-  - 
-  - 
-  - 
+  - Spike
+  - DamageBuff
+  - BackGround
   - 
   - 
   - 

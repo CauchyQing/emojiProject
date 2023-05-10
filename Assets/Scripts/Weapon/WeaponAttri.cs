@@ -24,6 +24,7 @@ public class WeaponAttri : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void OnDestroy()
     {
         WeaponManager.Instance.DecreaseWeaponCount();

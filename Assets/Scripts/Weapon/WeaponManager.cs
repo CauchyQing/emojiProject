@@ -30,19 +30,41 @@ public class WeaponManager : Singleton<WeaponManager>
         DontDestroyOnLoad(this);
     }
 
-    public void InstantiateWeapon(string WeaponName, Transform transform)
+    public void InstantiateDropWeapon(string WeaponName, Transform transform)
     {
         foreach(GameObject prefab in weaponPrefabs)
         {
             if(prefab.GetComponent<WeaponAttri>().GetWeaponName() == WeaponName)
             {
-                var instance = GameObject.Instantiate(prefab, transform);
-                instance.SetActive(true);
+                var instance = Instantiate(prefab, transform.position,transform.rotation);
+                instance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 500);
+                StartCoroutine(DisableColliderCoroutine(instance));
                 weaponCount++;
                 break;
             }
         }
     }
+
+
+    private IEnumerator DisableColliderCoroutine(GameObject weapon)
+    {
+        // Disable the collider
+        weapon.GetComponent<Collider2D>().enabled = false;
+
+        // Wait for the duration
+        yield return new WaitForSeconds(1f);
+
+        // Enable the collider
+        weapon.GetComponent<Collider2D>().enabled = true;
+    }
+
+    //IEnumerator CanNotTakeWeapon(GameObject weapon)
+    //{
+    //    //´úÂë¿é
+    //    System.Threading.Thread.Sleep(500);
+    //    weapon.GetComponent<Collider2D>().enabled = true;
+    //    yield return 0;
+    //}
     private void DropWeapons()
     {
         timer -= Time.deltaTime;

@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
 
     [HideInInspector]
     public Transform tf;
+    public GameObject parent;
     public playerAttribution pa;
     public playerController controller;
 
@@ -18,22 +19,27 @@ public class Attack : MonoBehaviour
     //    Debug.Log("pengzhuang");
     //    other.GetComponent<playerAttribution>().TakeDamage(this,pa.state);
     //}
+    void Start()
+    {
+        // pa = GetComponentInParent<playerAttribution>();
+        pa = this.transform.parent.GetComponent<playerAttribution>();
+
+        tf = GetComponent<Transform>();
+        // controller = GetComponentInParent<playerController>();
+        controller = this.transform.parent.GetComponent<playerController>();
+    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("pengzhuang");
-        other.GetComponent<playerAttribution>().TakeDamage(this, pa.state);
+         other.GetComponent<playerAttribution>().TakeDamage(this, pa.state);
+        //other.GetComponent<playerAttribution>().TakeDamage(this, GetComponent<playerAttribution>().state);
+
     }
+    
     // Start is called before the first frame update
-    void Start()
-    {
-        pa = GetComponentInParent<playerAttribution>();
-        tf = GetComponent<Transform>();
-        controller = GetComponentInParent<playerController>();
-    }
+
 
     // Update is called once per frame
-    void Update()
-    {
 
-    }
 }

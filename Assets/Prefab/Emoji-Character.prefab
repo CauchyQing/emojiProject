@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268751005190773214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6211412937486145522}
   - component: {fileID: 5069273336387464097}
   - component: {fileID: 2099385844571060116}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\U0001F45E\u7537\u978B(240 x 240)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3611421627614694241}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 7115908240723709837}
   - component: {fileID: 7040765516971953426}
   - component: {fileID: 8295616888194385830}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\U0001F590\U0001F3FB\u624B\u638C_ \u8F83\u6D45\u80A4\u8272(240 x 240)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5693751209070946251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4278355196478657878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1686354735450540609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6136517259741601489}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 508760382178179111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 5527040187467622397}
   - component: {fileID: 2095284757953122475}
   - component: {fileID: 1885538103941810702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\U0001F91A\U0001F3FB\u7ACB\u8D77\u7684\u624B\u80CC_ \u8F83\u6D45\u80A4\u8272(240
     x 240)"
   m_TagString: Untagged
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
   - component: {fileID: 6912029452503621537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Emoji-Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ CapsuleCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 10
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -661,7 +661,7 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -695,7 +695,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!95 &3415477207734184350
@@ -781,6 +781,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+        m_TargetAssemblyTypeName: PlayAudioEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: e61a649eb7e2989499b396d65707cc97, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SuccessDefend:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+        m_TargetAssemblyTypeName: PlayAudioEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: a61ff2f31c611094cb6c3e9ab3db51b8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
@@ -791,6 +818,7 @@ MonoBehaviour:
     m_Bits: 64
   isGround: 0
   isPlatform: 0
+  damageMultiplier: 1
   state: 0
 --- !u!114 &2061278187762573184
 MonoBehaviour:
@@ -806,12 +834,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimation: {fileID: 0}
   inputDirection: {x: 0, y: 0}
+  faceDirection: 0
   speed: 10
-  jumpForce: 20
+  jumpForce: 25
   isNormalAttack: 0
   isAccumulate: 0
   isDefend: 0
   recoveryTime: 0.3
+  DefendEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4ccd5196954d19542917d2c5bf60b253, type: 2}
+        m_TargetAssemblyTypeName: PlayAudioEventSO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 90c32278ccfe6ec488302a37be580ea4, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7462130854528619003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,7 +894,8 @@ MonoBehaviour:
   spriteLibrary: {fileID: 0}
   PlayerWeapon: empty
   animator: {fileID: 3415477207734184350}
-  overrideController: {fileID: 22100000, guid: 4acf929775bbf22419ae9fa0867adfe9, type: 2}
+  GuitarController: {fileID: 22100000, guid: 321b84b70106b8f4ba8abe2eceda4aed, type: 2}
+  EmptyController: {fileID: 22100000, guid: 4acf929775bbf22419ae9fa0867adfe9, type: 2}
   originalContorller: {fileID: 9100000, guid: 229a50584fa27ad4eb1339678481b318, type: 2}
 --- !u!114 &4409306863424732715
 MonoBehaviour:
@@ -1019,50 +1064,10 @@ MonoBehaviour:
     m_ActionId: d02ab805-9102-43b9-9143-929d603e638a
     m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9722a529-850c-47f0-b3e5-cbdf486d7718
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 881b6059-1201-48a1-aa93-ed5566d50611
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3e752182-ca50-46ab-8856-624cf8564e0b
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 90ac0d87-67c9-4f4c-8c45-263a96a34284
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3e038a1e-6de1-4ff4-b46c-c7d6b2df2a33
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 882e150a-3311-4269-b233-a623cfc64e5d
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 392c3dcd-bfed-4972-a35d-363c68ff2b2c
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7196787824306238943}
         m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
-        m_MethodName: NextFace
+        m_MethodName: ChageWeapon
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1072,8 +1077,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 1ad8a4bf-2c04-45ac-be44-a46facd6dd34
-    m_ActionName: UI/changeFace[/Keyboard/q]
+    m_ActionId: 4ad729ac-a541-48cf-8153-0b5496150cdf
+    m_ActionName: GamePlay/ChangeWeapon[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a4b09b0-4de5-4c76-ac07-c4eb03266bc3
+    m_ActionName: UI/RIGHT[/Keyboard/d,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
@@ -1088,7 +1097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8146146077002834067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1138,7 @@ GameObject:
   - component: {fileID: 3304845488696462168}
   - component: {fileID: 2411176111099024131}
   - component: {fileID: 3667995830995368585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\U0001F5E1\uFE0F\u5315\u9996(240 x 240)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1264,14 +1273,14 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0004473, y: 0.060945332}
+  m_Offset: {x: 3.0602715, y: 0.060945332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1282,7 +1291,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9379225, y: 1.5083145}
+  m_Size: {x: 2.818286, y: 1.5083145}
   m_EdgeRadius: 0
 --- !u!114 &3667995830995368585
 MonoBehaviour:
@@ -1296,11 +1305,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa91e25e9a86e894b8984dca67521617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  attackForce: 2
+  damage: 10
+  attackForce: 5
   tf: {fileID: 6716714051726491480}
+  parent: {fileID: 0}
   pa: {fileID: 0}
-  controller: {fileID: 2061278187762573184}
+  controller: {fileID: 0}
 --- !u!1 &6411914224487993498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2452991633747363887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1355,7 @@ GameObject:
   - component: {fileID: 2120832639243932391}
   - component: {fileID: 7023030382938154235}
   - component: {fileID: 2367776534110333192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\U0001F60B\u597D\u5403(240 x 240)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1467,7 +1477,7 @@ GameObject:
   - component: {fileID: 2550392249990471302}
   - component: {fileID: 8460001392404643099}
   - component: {fileID: 906293231186290923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\U0001F45E\u7537\u978B(240 x 240) \u62F7\u8D1D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1586,7 +1596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5895372427726481134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2935887152018157155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}

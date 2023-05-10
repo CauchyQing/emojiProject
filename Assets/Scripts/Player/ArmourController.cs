@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.InputSystem;
+
 public class ArmourController : MonoBehaviour
 {
     //public List<SpriteResolver> spriteResolvers = new List<SpriteResolver>();
@@ -29,14 +30,16 @@ public class ArmourController : MonoBehaviour
 
     [HideInInspector]
     public SpriteLibrary spriteLibrary;
-  
+
     public string PlayerWeapon = "weapon";//角色当前手持的武器
 
     private playerController playerController;
 
     public Animator animator;
-    public AnimatorOverrideController overrideController;
+    public AnimatorOverrideController GuitarController;
+    public AnimatorOverrideController EmptyController;
     public RuntimeAnimatorController originalContorller;
+
 
     private void Start()
     {
@@ -74,6 +77,7 @@ public class ArmourController : MonoBehaviour
         {
             Weapon.SetCategoryAndLabel(Weapon.GetCategory(), WeaponLabel);
             PlayerWeapon = WeaponLabel;
+            UpdateAnimtorContoller();
         }
     }
 
@@ -103,12 +107,47 @@ public class ArmourController : MonoBehaviour
         Debug.Log("ssssss");
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+
+    //    if (other.gameObject.CompareTag("Weapon") && PlayerWeapon == "empty")
+    //    {
+    //        SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
+    //        Destroy(other.gameObject);
+    //    }
+    //}
+
+    private List<Collider2D> otherWeapons = new List<Collider2D>();
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Weapon") && PlayerWeapon == "empty")
+        if (other.gameObject.CompareTag("Weapon")){
+            otherWeapons.Add(other);
+        }
+        //if (other.gameObject.CompareTag("Weapon") && )
+        //{
+        //    SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
+        //    Destroy(other.gameObject);
+        //}
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Weapon"))
         {
-            SetWeapon(other.GetComponent<WeaponAttri>().GetWeaponName());
-            Destroy(other.gameObject);
+            otherWeapons.Remove(other);
+        }
+    }
+    public void ChageWeapon(InputAction.CallbackContext obj)
+    {
+        if (obj.performed && (otherWeapons.Count != 0))
+        {
+            if(PlayerWeapon != "empty")
+            {
+                WeaponsDrops(transform);
+            }
+            var coll = otherWeapons[0];
+            SetWeapon(coll.GetComponent<WeaponAttri>().GetWeaponName());
+            Destroy(coll.gameObject);
+            otherWeapons.Remove(coll);
         }
     }
 
@@ -117,13 +156,13 @@ public class ArmourController : MonoBehaviour
         if (PlayerWeapon == "empty" && playerController.isNormalAttack)
         {
             //originalContorller = animator.runtimeAnimatorController;
-            animator.runtimeAnimatorController = overrideController;
+            animator.runtimeAnimatorController = EmptyController;
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "riot");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "riot");
         }
-        else
+        else if(RHand.GetCategory() != "hand")
         {
-            animator.runtimeAnimatorController = originalContorller;
+            UpdateAnimtorContoller();
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "hand");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "hand");
         }
@@ -133,7 +172,25 @@ public class ArmourController : MonoBehaviour
     /*武器掉落，需传入掉落武器的Transform*/
     public void WeaponsDrops(Transform transform)
     {
+        WeaponManager.Instance.InstantiateDropWeapon(PlayerWeapon, transform);
         SetWeapon("empty");
-        WeaponManager.Instance.InstantiateWeapon(PlayerWeapon, transform);
+    }
+
+    private void UpdateAnimtorContoller()
+    {
+        Debug.Log("Plyer Weapon----> " + PlayerWeapon);
+        if (PlayerWeapon == "guitar")
+        {
+        Debug.Log("Update Controller----> " + PlayerWeapon);
+            Debug.Log(animator.runtimeAnimatorController);
+
+            animator.runtimeAnimatorController = GuitarController;
+        }
+        else
+        {
+            Debug.Log("Update Controller----> " + PlayerWeapon);
+
+            animator.runtimeAnimatorController = originalContorller;
+        }
     }
 }
