@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerGuitar
+  m_Controller: {fileID: 9100000, guid: 229a50584fa27ad4eb1339678481b318, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 09209f863dc2700429dedf956fc78aad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 09209f863dc2700429dedf956fc78aad, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1d961c25d6a873045af37870ea296279, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1d961c25d6a873045af37870ea296279, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7f47b2b216552f84688edacaab0d881f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7f47b2b216552f84688edacaab0d881f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 271932ab231a051459b043a19bd77b0c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f3cca739ed786ee4ca138e5cc2d28b37, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 70c267fb71b8b5e47aa8429ca4002829, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 70c267fb71b8b5e47aa8429ca4002829, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: af2617323755a4646856ce7ca9ea7ffe, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 71a5ca39fb246444086d92928f0a8316, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 53b7cf28dbcef9540b33a507cf5d77a0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 53b7cf28dbcef9540b33a507cf5d77a0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2b75ec157ca289f46aa401b1fbbe7c14, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2b75ec157ca289f46aa401b1fbbe7c14, type: 2}
