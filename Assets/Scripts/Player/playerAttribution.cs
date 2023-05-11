@@ -11,7 +11,7 @@ public class playerAttribution : MonoBehaviour
     public playerAnimation anim;
     public Rigidbody2D rb;
     public playerController pc;
-
+    private Transform playerTransform;
     [Header("基本属性")]
     public float health = 100;    //初始血量
     public float currentHealth;   //当前血量
@@ -21,6 +21,7 @@ public class playerAttribution : MonoBehaviour
     public UnityEvent Ondie;        //死亡事件
     public UnityEvent SuccessDefend;        //振刀成功
 
+    public bool isHurt  = false;   //是否处于被攻击状态
 
 
     [Header("检测参数")]
@@ -32,7 +33,8 @@ public class playerAttribution : MonoBehaviour
     public bool isPlatform;//判断是否在平台
     public float damageMultiplier = 1;
 
-    public enum STATE { 
+    public enum STATE
+    {
         NOTHING,
         DEFEND,
         NORMALATTACK,
@@ -44,8 +46,10 @@ public class playerAttribution : MonoBehaviour
     {
         Check();
         updateSTATE();
+      
 
     }
+  
     public void updateSTATE()
     {
         if (pc.isDefend)
@@ -64,7 +68,6 @@ public class playerAttribution : MonoBehaviour
     {
         isGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, groundLayer);
         isPlatform = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, platformLayer);
-
     }
 
     private void OnDrawGizmosSelected()
@@ -101,9 +104,9 @@ public class playerAttribution : MonoBehaviour
             attacker.pa.GetComponent<ArmourController>().WeaponsDrops(attacker.pa.transform);
             if (attacker.pa.currentHealth <= 0)
             {
-               
+
                 attacker.pa.currentHealth = 0;
-               // attacker.pa.Ondie?.Invoke();
+                // attacker.pa.Ondie?.Invoke();
                 attacker.pa.rb.AddForce(2 * attacker.pa.transform.up * attacker.attackForce, ForceMode2D.Impulse);
                 if (attacker.tf.position.x < transform.position.x)
                     attacker.pa.rb.AddForce(-1 * transform.right * attacker.attackForce * 5, ForceMode2D.Impulse);
@@ -132,21 +135,22 @@ public class playerAttribution : MonoBehaviour
         if (currentHealth <= 0)
         {
 
-            
+
             currentHealth = 0;
-            gameObject.layer = LayerMask.NameToLayer("Default");
+            gameObject.layer = LayerMask.NameToLayer("None");
 
             //Ondie?.Invoke();
             rb.AddForce(5 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             anim.PlayerHurt();
             if (attacker.tf.position.x < transform.position.x)
-                rb.AddForce(transform.right * attacker.attackForce * 10 * x, ForceMode2D.Impulse);
+                rb.AddForce(transform.right * attacker.attackForce * 20* x, ForceMode2D.Impulse);
             else
-                rb.AddForce(-1 * transform.right * attacker.attackForce * 10 * x, ForceMode2D.Impulse);
+                rb.AddForce(-1 * transform.right * attacker.attackForce * 20 * x, ForceMode2D.Impulse);
 
         }
         else
         {
+            anim.PlayerHurt();
             rb.AddForce(2 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             if (attacker.tf.position.x < transform.position.x)
                 rb.AddForce(transform.right * attacker.attackForce * x, ForceMode2D.Impulse);
@@ -164,7 +168,7 @@ public class playerAttribution : MonoBehaviour
             Destroy(collision.gameObject);
 
         }
-      
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("BackGround"))
         {
             GetComponent<Transform>().tag = "Untagged";//将角色标签改为Untagged;
@@ -175,5 +179,23 @@ public class playerAttribution : MonoBehaviour
 
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("MC");
+        if (collision.gameObject.layer== LayerMask.NameToLayer("MovingPlatform"))
+        {
+            Debug.Log("MC0");
+           
+         gameObject.transform.SetParent(collision.gameObject.GetComponent<Transform>());
+        }
+    }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("OUT MC");
+        gameObject.transform.SetParent(null);
+
+
+
+    }
 }

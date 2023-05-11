@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c576d0f95a12d50478aee98bea50fd40
+guid: adc223a816f192c478b9483b49fcb615
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u8FD4\u56DE.jpg_0"
+      name: "\u8FD4\u56DE_0"
       rect:
         serializedVersion: 2
-        x: 25
-        y: 248
-        width: 354
-        height: 268
+        x: 1490
+        y: 93
+        width: 163
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,50 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5c55fcdf7ba6814e89895bc52399be6
-      internalID: 1079068106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u8FD4\u56DE.jpg_1"
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 298
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 949c0b80916832a4986741c0738d6426
-      internalID: 835902086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u8FD4\u56DE.jpg_2"
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 95
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c574d45d1425bd54c8856932479336c6
-      internalID: 1925364917
+      spriteID: 8a25737aafe7d874ba68a04b525c978a
+      internalID: 336912712
       vertices: []
       indices: 
       edges: []
@@ -180,9 +138,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u8FD4\u56DE.jpg_0": 1079068106
-      "\u8FD4\u56DE.jpg_1": 835902086
-      "\u8FD4\u56DE.jpg_2": 1925364917
+      "\u8FD4\u56DE_0": 336912712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

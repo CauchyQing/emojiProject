@@ -10,15 +10,17 @@ public class SceneLoader : MonoBehaviour
 {
     public Transform playerTrans;
     public Vector3 firstPosition;
+    public Vector3 selectPosition;
 
     [Header("事件监听")]
     public SceneLoadEventSO loadEventSO;
 
-    public GameSceneSO firstLoadScene;
-
     [Header("广播")]
     public VoidEventSO afterSceneLoadedEvent;
 
+    [Header("场景")]
+    public GameSceneSO firstLoadScene;
+    public GameSceneSO menuScene;
     private GameSceneSO currentLoadScene;
     private GameSceneSO sceneToLoad;
     private Vector3 positionToGo;

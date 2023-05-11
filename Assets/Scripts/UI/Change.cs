@@ -25,6 +25,7 @@ public class Change : MonoBehaviour
     public void Selectplayer()
     {
         Debug.Log("选人界面");
-        SceneManager.LoadScene("Selectplayer");
+        SceneManager.LoadScene(1);
     }
+   
 }

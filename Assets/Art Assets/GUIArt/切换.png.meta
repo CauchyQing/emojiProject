@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c576d0f95a12d50478aee98bea50fd40
+guid: 4dfaad9e400cdcd4ba28c28bc424e3cc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u8FD4\u56DE.jpg_0"
+      name: "\u5207\u6362_0"
       rect:
         serializedVersion: 2
-        x: 25
-        y: 248
-        width: 354
-        height: 268
+        x: 0
+        y: 46
+        width: 325
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5c55fcdf7ba6814e89895bc52399be6
-      internalID: 1079068106
+      spriteID: 7132768b6b18fa548814724ef761fe3a
+      internalID: 1695340354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u8FD4\u56DE.jpg_1"
+      name: "\u5207\u6362_1"
       rect:
         serializedVersion: 2
-        x: 515
-        y: 298
-        width: 7
-        height: 5
+        x: 325
+        y: 40
+        width: 325
+        height: 321
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,29 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 949c0b80916832a4986741c0738d6426
-      internalID: 835902086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u8FD4\u56DE.jpg_2"
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 95
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c574d45d1425bd54c8856932479336c6
-      internalID: 1925364917
+      spriteID: 1729057725b090a48bd4a2cfe1845834
+      internalID: 1903019841
       vertices: []
       indices: 
       edges: []
@@ -180,9 +159,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u8FD4\u56DE.jpg_0": 1079068106
-      "\u8FD4\u56DE.jpg_1": 835902086
-      "\u8FD4\u56DE.jpg_2": 1925364917
+      "\u5207\u6362_0": 1695340354
+      "\u5207\u6362_1": 1903019841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
