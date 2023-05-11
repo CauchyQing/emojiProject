@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Playerground/Red Gate.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GUI/Start.unity
     guid: 197a6d45b37983f44be2098d3649fe55
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PermanentScene.unity
     guid: ca17a7e4458299f4aabdae9772ee9cef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GUI/Develop.unity
     guid: 4770f02d4b809ed458be1e3aa82d79ce
   - enabled: 0
