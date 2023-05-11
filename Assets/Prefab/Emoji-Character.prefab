@@ -891,6 +891,7 @@ MonoBehaviour:
   - sneaker
   - leather
   - climbing
+  - slipper
   spriteLibrary: {fileID: 0}
   PlayerWeapon: empty
   animator: {fileID: 3415477207734184350}

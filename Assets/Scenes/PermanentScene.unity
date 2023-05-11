@@ -786,7 +786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0056825, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 7.0059853, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -859,6 +859,8 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 2042124010399030589, guid: 5ab2b154a7e882046af2fe0b24ddc21a, type: 3}
   - {fileID: 2065876498536233484, guid: ced5abe2c6d691d4fae7ff1019040ccb, type: 3}
+  - {fileID: 2905806757252984543, guid: ea915e8429a8b1343ac6dc45548606b8, type: 3}
+  - {fileID: 6631666678597080508, guid: 31eee23b83a9366488ae4980d1af86cc, type: 3}
   minX: -20
   maxX: 20
   minY: 30
@@ -1110,7 +1112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606333850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0056825, y: -2.6415155, z: -10}
+  m_LocalPosition: {x: 7.0059853, y: -2.6415155, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
