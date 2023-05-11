@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &140664139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &477306034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,9 +754,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTrans: {fileID: 0}
   firstPosition: {x: 0, y: 0, z: 0}
+  selectPosition: {x: 0, y: 0, z: 0}
   loadEventSO: {fileID: 11400000, guid: 98b0fac73139a204d889eaacc8427484, type: 2}
-  firstLoadScene: {fileID: 11400000, guid: 2d34af9bfccf47d478476c496c54309b, type: 2}
+  newGameEvent: {fileID: 11400000, guid: 8592b4b5cff1ba943922e076d027f69a, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 76e01d21d39c3bc4386ac98bc8135ac1, type: 2}
+  firstLoadScene: {fileID: 11400000, guid: 2d34af9bfccf47d478476c496c54309b, type: 2}
+  menuScene: {fileID: 11400000, guid: 120210cc9dd2a5c4d92b39dee4d2bd9e, type: 2}
   fadeDuration: 0
 --- !u!1 &519420028
 GameObject:

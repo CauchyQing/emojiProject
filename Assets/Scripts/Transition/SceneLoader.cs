@@ -14,6 +14,7 @@ public class SceneLoader : MonoBehaviour
 
     [Header("事件监听")]
     public SceneLoadEventSO loadEventSO;
+    public VoidEventSO newGameEvent;
 
     [Header("广播")]
     public VoidEventSO afterSceneLoadedEvent;
@@ -31,17 +32,21 @@ public class SceneLoader : MonoBehaviour
     //TODO:
     private void Start()
     {
-        NewGame();
+        //NewGame();position需要改
+        OnLoadRequestEvent(menuScene, selectPosition, true);
+
     }
 
     private void OnEnable()
     {
         loadEventSO.loadRequestEvent += OnLoadRequestEvent;
+        newGameEvent.OnEventRaised += NewGame;
     }
 
     private void OnDisable()
     {
         loadEventSO.loadRequestEvent -= OnLoadRequestEvent;
+        newGameEvent.OnEventRaised -= NewGame;
     }
 
     private void NewGame()
