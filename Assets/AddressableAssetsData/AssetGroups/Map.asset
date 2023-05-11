@@ -32,11 +32,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2554fd1f4a45e3e4c91de6eea529f9bc
-    m_Address: selecthero
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 197a6d45b37983f44be2098d3649fe55
     m_Address: Start
     m_ReadOnly: 0
@@ -44,6 +39,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ca17a7e4458299f4aabdae9772ee9cef
     m_Address: PermanentScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2554fd1f4a45e3e4c91de6eea529f9bc
+    m_Address: ChooseCharacter
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 920f355dab4d8d34b899413970227d88
+    m_Address: ChooseMap
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

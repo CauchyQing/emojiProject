@@ -809,6 +809,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isHurt: 0
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
@@ -1055,10 +1056,6 @@ MonoBehaviour:
     m_ActionName: GamePlay/Defend
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: f57a8f94-df5d-4636-bfcf-99acfcc41192
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: cc925a6a-6b58-4e29-88f4-12aa3a8a892a
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
@@ -1098,24 +1095,12 @@ MonoBehaviour:
     m_ActionId: 3a4b09b0-4de5-4c76-ac07-c4eb03266bc3
     m_ActionName: UI/RIGHT[/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7196787824306238943}
-        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
-        m_MethodName: NextFace
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1ad8a4bf-2c04-45ac-be44-a46facd6dd34
-    m_ActionName: UI/changeFace[/Keyboard/q]
+      m_Calls: []
+    m_ActionId: 9f646451-0c68-41bd-b768-d77594e19b3b
+    m_ActionName: UI/UP[/Keyboard/w,/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: GamePlay
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &7037921289865438601

@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8453d698ac3f018438938c618435c8af, type: 3}
-  m_Name: Select
+  m_Script: {fileID: 11500000, guid: 9b9a143ecea3ba742b4c90598894a089, type: 3}
+  m_Name: ChooseMapEvent
   m_EditorClassIdentifier: 
-  sceneType: 1
-  sceneReference:
-    m_AssetGUID: 2554fd1f4a45e3e4c91de6eea529f9bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
