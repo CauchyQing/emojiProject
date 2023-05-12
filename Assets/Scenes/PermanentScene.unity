@@ -123,6 +123,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &128733738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128733740}
+  - component: {fileID: 128733739}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &128733739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128733738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99241c3c3dc98c4ba722f27fad41e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redGate: {fileID: 11400000, guid: 8d2ff7312b15d89428f6d60abb300ae0, type: 2}
+  castle: {fileID: 11400000, guid: 2d34af9bfccf47d478476c496c54309b, type: 2}
+  redGateEvent: {fileID: 11400000, guid: 7c001af497c0ff94f850381a678c7442, type: 2}
+  castleEvent: {fileID: 11400000, guid: 8d0db2e82824d0642b04238171487dc5, type: 2}
+--- !u!4 &128733740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128733738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &140664138
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +805,7 @@ MonoBehaviour:
   chooseCharacterEvent: {fileID: 11400000, guid: c3f6b37623b23a345aa3b8a858675987, type: 2}
   chooseMapEvent: {fileID: 11400000, guid: 63c17bce32f515b4a9b8d20778e2acf5, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 76e01d21d39c3bc4386ac98bc8135ac1, type: 2}
-  firstLoadScene: {fileID: 11400000, guid: 2d34af9bfccf47d478476c496c54309b, type: 2}
+  firstLoadScene: {fileID: 0}
   menuScene: {fileID: 11400000, guid: 120210cc9dd2a5c4d92b39dee4d2bd9e, type: 2}
   chooseCharacterScene: {fileID: 11400000, guid: f8a96a9a41e599241a9e277ca8c90f67, type: 2}
   chooseMapScene: {fileID: 11400000, guid: 3528e7fc102c22d4aa55bd8294ece2bf, type: 2}
