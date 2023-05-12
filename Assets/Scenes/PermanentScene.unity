@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99241c3c3dc98c4ba722f27fad41e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 518818773}
   redGate: {fileID: 11400000, guid: 8d2ff7312b15d89428f6d60abb300ae0, type: 2}
   castle: {fileID: 11400000, guid: 2d34af9bfccf47d478476c496c54309b, type: 2}
   redGateEvent: {fileID: 11400000, guid: 7c001af497c0ff94f850381a678c7442, type: 2}
