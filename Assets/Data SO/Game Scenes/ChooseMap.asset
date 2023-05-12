@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8453d698ac3f018438938c618435c8af, type: 3}
-  m_Name: Select
+  m_Name: ChooseMap
   m_EditorClassIdentifier: 
-  sceneType: 1
+  sceneType: 0
   sceneReference:
-    m_AssetGUID: 2554fd1f4a45e3e4c91de6eea529f9bc
+    m_AssetGUID: 920f355dab4d8d34b899413970227d88
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

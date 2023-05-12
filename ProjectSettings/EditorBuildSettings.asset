@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GUI/Develop.unity
     guid: 4770f02d4b809ed458be1e3aa82d79ce
   - enabled: 0
-    path: Assets/Scenes/GUI/selecthero.unity
+    path: Assets/Scenes/GUI/ChooseCharacter.unity
     guid: 2554fd1f4a45e3e4c91de6eea529f9bc
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 64f77ea7d37a164488ff816962224ef6, type: 2}

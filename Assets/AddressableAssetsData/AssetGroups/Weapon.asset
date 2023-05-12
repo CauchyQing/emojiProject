@@ -22,28 +22,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4770f02d4b809ed458be1e3aa82d79ce
-    m_Address: Assets/Scenes/GUI/Develop.unity
+  - m_GUID: ced5abe2c6d691d4fae7ff1019040ccb
+    m_Address: Hammer
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 987e6042e0d66e44ba3936576d619188
-    m_Address: Assets/Scenes/GUI/ENDScenario.unity
+  - m_GUID: ea915e8429a8b1343ac6dc45548606b8
+    m_Address: Guitar
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2554fd1f4a45e3e4c91de6eea529f9bc
-    m_Address: Assets/Scenes/GUI/selecthero.unity
+  - m_GUID: 31eee23b83a9366488ae4980d1af86cc
+    m_Address: Pickaxe
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 197a6d45b37983f44be2098d3649fe55
-    m_Address: Assets/Scenes/GUI/Start.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ca17a7e4458299f4aabdae9772ee9cef
-    m_Address: Assets/Scenes/PermanentScene.unity
+  - m_GUID: 938ff30c3b938494c8f4e121a2b3a8ab
+    m_Address: Emoji-Character
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
