@@ -30,6 +30,9 @@ public class SceneLoader : MonoBehaviour
     private GameSceneSO sceneToLoad;
     private bool isLoading;
 
+    public Canvas canvas;
+    public float hintDuration;
+
     private void Start()
     {
         OnLoadRequestEvent(menuScene);
@@ -54,7 +57,18 @@ public class SceneLoader : MonoBehaviour
     private void ChooseCharacter()
     {
         sceneToLoad = chooseCharacterScene;
-        OnLoadRequestEvent(sceneToLoad);
+        if (firstLoadScene != null)
+            OnLoadRequestEvent(sceneToLoad);
+        else
+            StartCoroutine(FadeHint());
+    }
+
+    private IEnumerator FadeHint()
+    {
+        canvas.gameObject.SetActive(true);
+        //等待一定秒数
+        yield return new WaitForSeconds(hintDuration);
+        canvas.gameObject.SetActive(false);
     }
 
     private void ChooseMap()
