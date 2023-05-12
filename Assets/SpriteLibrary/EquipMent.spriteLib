@@ -32,8 +32,13 @@ MonoBehaviour:
       m_Sprite: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
+    - m_Name: liuhan
+      m_Hash: 371173169
+      m_Sprite: {fileID: 3618330454556448840, guid: bc76f193dc324e54f84568c3f9e6f855, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3618330454556448840, guid: bc76f193dc324e54f84568c3f9e6f855, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 3
+    m_EntryOverrideCount: 4
   - m_Name: Weapon
     m_Hash: 782213840
     m_CategoryList: []
@@ -155,5 +160,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638193307032770735
+  m_ModificationHash: 638195254994706216
   m_Version: 1

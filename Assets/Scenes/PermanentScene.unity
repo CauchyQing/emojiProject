@@ -717,6 +717,7 @@ MonoBehaviour:
   newGameEvent: {fileID: 11400000, guid: 8592b4b5cff1ba943922e076d027f69a, type: 2}
   chooseCharacterEvent: {fileID: 11400000, guid: c3f6b37623b23a345aa3b8a858675987, type: 2}
   chooseMapEvent: {fileID: 11400000, guid: 63c17bce32f515b4a9b8d20778e2acf5, type: 2}
+  replayEvent: {fileID: 11400000, guid: 184ed758df3c9b847a65a0a359a7dc92, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 76e01d21d39c3bc4386ac98bc8135ac1, type: 2}
   firstLoadScene: {fileID: 0}
   menuScene: {fileID: 11400000, guid: 120210cc9dd2a5c4d92b39dee4d2bd9e, type: 2}

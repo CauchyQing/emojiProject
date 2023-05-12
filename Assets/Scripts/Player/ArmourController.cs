@@ -41,7 +41,7 @@ public class ArmourController : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
     private void Start()
     {
@@ -108,7 +108,6 @@ public class ArmourController : MonoBehaviour
             }
             LShoe.SetCategoryAndLabel(LShoe.GetCategory(), ShoeLabels[ShoeIndex]);
             RShoe.SetCategoryAndLabel(RShoe.GetCategory(), ShoeLabels[ShoeIndex]);
-            Debug.Log("ssssss");
         }
     }
 
@@ -125,7 +124,8 @@ public class ArmourController : MonoBehaviour
     private List<Collider2D> otherWeapons = new List<Collider2D>();
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Weapon")){
+        if (other.gameObject.CompareTag("Weapon"))
+        {
             otherWeapons.Add(other);
         }
         //if (other.gameObject.CompareTag("Weapon") && )
@@ -145,7 +145,7 @@ public class ArmourController : MonoBehaviour
     {
         if (obj.performed && (otherWeapons.Count != 0))
         {
-            if(PlayerWeapon != "empty")
+            if (PlayerWeapon != "empty")
             {
                 WeaponsDrops(transform);
             }
@@ -165,13 +165,13 @@ public class ArmourController : MonoBehaviour
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "riot");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "riot");
         }
-        else if(RHand.GetCategory() != "hand")
+        else if (RHand.GetCategory() != "hand")
         {
             UpdateAnimtorContoller();
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "hand");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "hand");
         }
-        
+
     }
 
     /*ÎäÆ÷µôÂä£¬Ðè´«ÈëµôÂäÎäÆ÷µÄTransform*/
@@ -186,7 +186,7 @@ public class ArmourController : MonoBehaviour
         Debug.Log("Plyer Weapon----> " + PlayerWeapon);
         if (PlayerWeapon == "guitar")
         {
-        Debug.Log("Update Controller----> " + PlayerWeapon);
+            Debug.Log("Update Controller----> " + PlayerWeapon);
             Debug.Log(animator.runtimeAnimatorController);
 
             animator.runtimeAnimatorController = GuitarController;

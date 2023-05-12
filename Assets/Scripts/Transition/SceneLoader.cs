@@ -18,6 +18,7 @@ public class SceneLoader : MonoBehaviour
     public VoidEventSO newGameEvent;
     public VoidEventSO chooseCharacterEvent;
     public VoidEventSO chooseMapEvent;
+    public VoidEventSO replayEvent;
 
     [Header("¹ã²¥")]
     public VoidEventSO afterSceneLoadedEvent;
@@ -64,6 +65,7 @@ public class SceneLoader : MonoBehaviour
         chooseCharacterEvent.OnEventRaised += ChooseCharacter;
         newGameEvent.OnEventRaised += NewGame;
         afterSceneLoadedEvent.OnEventRaised += EndEvent;
+        replayEvent.OnEventRaised += ReStart;
     }
 
     private void OnDisable()
@@ -73,6 +75,7 @@ public class SceneLoader : MonoBehaviour
         chooseCharacterEvent.OnEventRaised -= ChooseCharacter;
         newGameEvent.OnEventRaised -= NewGame;
         afterSceneLoadedEvent.OnEventRaised -= EndEvent;
+        replayEvent.OnEventRaised -= ReStart;
     }
 
     private void ChooseCharacter()
@@ -174,13 +177,15 @@ public class SceneLoader : MonoBehaviour
             endPlayer[0].GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
             endPlayer[0].transform.position = new Vector2(1.65f, -0.33f);
         }
-        else if (currentLoadScene.sceneType == SceneType.Menu)
+    }
+
+    private void ReStart()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
         {
-            players = GameObject.FindGameObjectsWithTag("Player");
-            foreach (GameObject player in players)
-            {
-                Destroy(player);
-            }
+            Destroy(player);
         }
+        OnLoadRequestEvent(menuScene);
     }
 }
