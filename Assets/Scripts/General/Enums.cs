@@ -1,4 +1,4 @@
 public enum SceneType
 {
-    Menu, ChooseCharacter, Map
+    Menu, ChooseCharacter, Map, Other, EndGame
 }

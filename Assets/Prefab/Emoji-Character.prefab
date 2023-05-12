@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 4409306863424732715}
   - component: {fileID: 1551013433315223643}
   - component: {fileID: 6912029452503621537}
+  - component: {fileID: 7037921289865438601}
   m_Layer: 3
   m_Name: Emoji-Character
   m_TagString: Player
@@ -808,6 +809,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isHurt: 0
   checkRaduis: 0.1
   bottomOffset: {x: 0, y: 0}
   groundLayer:
@@ -894,6 +896,7 @@ MonoBehaviour:
   - sneaker
   - leather
   - climbing
+  - slipper
   spriteLibrary: {fileID: 0}
   PlayerWeapon: empty
   animator: {fileID: 3415477207734184350}
@@ -1056,10 +1059,6 @@ MonoBehaviour:
     m_ActionName: GamePlay/Defend
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: f57a8f94-df5d-4636-bfcf-99acfcc41192
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: cc925a6a-6b58-4e29-88f4-12aa3a8a892a
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
@@ -1083,14 +1082,43 @@ MonoBehaviour:
     m_ActionId: 4ad729ac-a541-48cf-8153-0b5496150cdf
     m_ActionName: GamePlay/ChangeWeapon[/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7196787824306238943}
+        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
+        m_MethodName: NextShoe
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3a4b09b0-4de5-4c76-ac07-c4eb03266bc3
     m_ActionName: UI/RIGHT[/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9f646451-0c68-41bd-b768-d77594e19b3b
+    m_ActionName: UI/UP[/Keyboard/w,/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: GamePlay
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7037921289865438601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620094325498275643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1c7eaa52e340344ba0b0824af39bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armourController: {fileID: 7196787824306238943}
 --- !u!1 &5712659595385472992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1449,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 6435770992328516628, guid: 3805f7e7ebc7f15419ab281f5188d990, type: 3}
+  m_Sprite: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1467,7 +1495,7 @@ MonoBehaviour:
   m_CategoryHash: 0
   m_labelHash: 0
   m_SpriteKey: 0
-  m_SpriteHash: 988905796
+  m_SpriteHash: 800671159
 --- !u!1 &7420712113309282252
 GameObject:
   m_ObjectHideFlags: 0

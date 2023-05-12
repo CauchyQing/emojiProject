@@ -21,6 +21,7 @@ public class playerAttribution : MonoBehaviour
     public UnityEvent Ondie;        //死亡事件
     public UnityEvent SuccessDefend;        //振刀成功
 
+    public bool isHurt  = false;   //是否处于被攻击状态
 
 
     [Header("检测参数")]
@@ -149,6 +150,7 @@ public class playerAttribution : MonoBehaviour
         }
         else
         {
+            anim.PlayerHurt();
             rb.AddForce(2 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             if (attacker.tf.position.x < transform.position.x)
                 rb.AddForce(transform.right * attacker.attackForce * x, ForceMode2D.Impulse);

@@ -12,6 +12,6 @@ public class SceneTransfer : MonoBehaviour
     {
         Debug.Log("×ª»»£¡£¡£¡");
 
-        loadEventSO.RaiseLoadRequestEvent(sceneToGo, positionToGo, true);
+        loadEventSO.RaiseLoadRequestEvent(sceneToGo);
     }
 }

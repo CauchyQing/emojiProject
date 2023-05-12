@@ -10,18 +10,18 @@ AnimatorOverrideController:
   m_Controller: {fileID: 9100000, guid: 229a50584fa27ad4eb1339678481b318, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 09209f863dc2700429dedf956fc78aad, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 09209f863dc2700429dedf956fc78aad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7e4dc83833f72a44bb64e7473cbdad67, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 1d961c25d6a873045af37870ea296279, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1d961c25d6a873045af37870ea296279, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f8ea48e65d507c4983415cbb95fc40f, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 7f47b2b216552f84688edacaab0d881f, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 7f47b2b216552f84688edacaab0d881f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3c2cb632ef7bd8245b028b3a5880e17c, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 271932ab231a051459b043a19bd77b0c, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: f3cca739ed786ee4ca138e5cc2d28b37, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 70c267fb71b8b5e47aa8429ca4002829, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 70c267fb71b8b5e47aa8429ca4002829, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4e69cea761e716e46b0d0a21d1810fb0, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: af2617323755a4646856ce7ca9ea7ffe, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 71a5ca39fb246444086d92928f0a8316, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 53b7cf28dbcef9540b33a507cf5d77a0, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 53b7cf28dbcef9540b33a507cf5d77a0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: eebb52322ca6c694998d463835fc8040, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 2b75ec157ca289f46aa401b1fbbe7c14, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 2b75ec157ca289f46aa401b1fbbe7c14, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 28ef5e919d75aff4eb5976d26c034fa4, type: 2}
