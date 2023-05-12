@@ -818,6 +818,9 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 2112
+  movingPlatformLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   isGround: 0
   isPlatform: 0
   damageMultiplier: 1
