@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PermanentScene.unity
     guid: ca17a7e4458299f4aabdae9772ee9cef
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GUI/Develop.unity
     guid: 4770f02d4b809ed458be1e3aa82d79ce
   - enabled: 0
