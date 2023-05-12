@@ -32,7 +32,7 @@ public class CameraControl : MonoBehaviour
 
     private void OnAfterSceneLoadedEvent()
     {
-        GetNewCameraBounds();
+        //GetNewCameraBounds();
     }
 
     private void OnCameraShakeEvent()
