@@ -21,7 +21,7 @@ public class playerAttribution : MonoBehaviour
     public UnityEvent Ondie;        //死亡事件
     public UnityEvent SuccessDefend;        //振刀成功
 
-    public bool isHurt  = false;   //是否处于被攻击状态
+    public bool isHurt = false;   //是否处于被攻击状态
 
 
     [Header("检测参数")]
@@ -46,10 +46,10 @@ public class playerAttribution : MonoBehaviour
     {
         Check();
         updateSTATE();
-      
+
 
     }
-  
+
     public void updateSTATE()
     {
         if (pc.isDefend)
@@ -93,7 +93,7 @@ public class playerAttribution : MonoBehaviour
         }
         else if (s == STATE.ACCUMULATEATTACK && state != STATE.DEFEND)
         {
-            TakeDamageHelp(attacker, (float)(damageMultiplier*1.5));
+            TakeDamageHelp(attacker, (float)(damageMultiplier * 1.5));
         }
 
         else if (s == STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
@@ -143,7 +143,7 @@ public class playerAttribution : MonoBehaviour
             rb.AddForce(5 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             anim.PlayerHurt();
             if (attacker.tf.position.x < transform.position.x)
-                rb.AddForce(transform.right * attacker.attackForce * 20* x, ForceMode2D.Impulse);
+                rb.AddForce(transform.right * attacker.attackForce * 20 * x, ForceMode2D.Impulse);
             else
                 rb.AddForce(-1 * transform.right * attacker.attackForce * 20 * x, ForceMode2D.Impulse);
 
@@ -164,7 +164,7 @@ public class playerAttribution : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("DamageBuff"))
         {
-            damageMultiplier +=(float)0.2;
+            damageMultiplier += (float)0.2;
             Destroy(collision.gameObject);
 
         }
@@ -174,7 +174,7 @@ public class playerAttribution : MonoBehaviour
             GetComponent<Transform>().tag = "Untagged";//将角色标签改为Untagged;
             Debug.Log("disappear");
 
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 
 
@@ -182,11 +182,11 @@ public class playerAttribution : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("MC");
-        if (collision.gameObject.layer== LayerMask.NameToLayer("MovingPlatform"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("MovingPlatform"))
         {
             Debug.Log("MC0");
-           
-         gameObject.transform.SetParent(collision.gameObject.GetComponent<Transform>());
+
+            gameObject.transform.SetParent(collision.gameObject.GetComponent<Transform>());
         }
     }
 
