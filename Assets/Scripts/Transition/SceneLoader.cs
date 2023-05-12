@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class SceneLoader : MonoBehaviour
     public VoidEventSO newGameEvent;
     public VoidEventSO chooseCharacterEvent;
     public VoidEventSO chooseMapEvent;
+    public VoidEventSO replayEvent;
 
     [Header("广播")]
     public VoidEventSO afterSceneLoadedEvent;
@@ -28,11 +30,32 @@ public class SceneLoader : MonoBehaviour
     public GameSceneSO chooseMapScene;
     private GameSceneSO currentLoadScene;
     private GameSceneSO sceneToLoad;
+    public GameSceneSO endScene;
     private bool isLoading;
+
+    public Canvas canvas;
+    public float hintDuration;
+    public GameObject generatePlayer;
+    public GameObject weapon;
+    private GameObject[] players;
+    private GameObject[] endPlayers;
+    private GameObject endPlayer;
 
     private void Start()
     {
         OnLoadRequestEvent(menuScene);
+    }
+
+    private void Update()
+    {
+        if (currentLoadScene != null && currentLoadScene.sceneType == SceneType.Map)
+        {
+            endPlayers = GameObject.FindGameObjectsWithTag("Player");
+            if (endPlayers.Length == 1)
+            {
+                OnLoadRequestEvent(endScene);
+            }
+        }
     }
 
     private void OnEnable()
@@ -41,6 +64,8 @@ public class SceneLoader : MonoBehaviour
         chooseMapEvent.OnEventRaised += ChooseMap;
         chooseCharacterEvent.OnEventRaised += ChooseCharacter;
         newGameEvent.OnEventRaised += NewGame;
+        afterSceneLoadedEvent.OnEventRaised += EndEvent;
+        replayEvent.OnEventRaised += ReStart;
     }
 
     private void OnDisable()
@@ -49,12 +74,26 @@ public class SceneLoader : MonoBehaviour
         newGameEvent.OnEventRaised -= ChooseMap;
         chooseCharacterEvent.OnEventRaised -= ChooseCharacter;
         newGameEvent.OnEventRaised -= NewGame;
+        afterSceneLoadedEvent.OnEventRaised -= EndEvent;
+        replayEvent.OnEventRaised -= ReStart;
     }
 
     private void ChooseCharacter()
     {
+        generatePlayer.SetActive(true);
         sceneToLoad = chooseCharacterScene;
-        OnLoadRequestEvent(sceneToLoad);
+        if (firstLoadScene != null)
+            OnLoadRequestEvent(sceneToLoad);
+        else
+            StartCoroutine(FadeHint());
+    }
+
+    private IEnumerator FadeHint()
+    {
+        canvas.gameObject.SetActive(true);
+        //等待一定秒数
+        yield return new WaitForSeconds(hintDuration);
+        canvas.gameObject.SetActive(false);
     }
 
     private void ChooseMap()
@@ -67,6 +106,12 @@ public class SceneLoader : MonoBehaviour
     {
         sceneToLoad = firstLoadScene;
         OnLoadRequestEvent(sceneToLoad);
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            player.GetComponent<PlayerInput>().SwitchCurrentActionMap("GamePlay");
+        }
+        generatePlayer.SetActive(false);
     }
 
     /// <summary>
@@ -108,18 +153,39 @@ public class SceneLoader : MonoBehaviour
     {
         currentLoadScene = sceneToLoad;
 
-        /*        playerTrans.position = positionToGo;
-
-                playerTrans.gameObject.SetActive(true);
-
-                if (fadeScreen)
-                {
-                    //TODO:
-                }*/
-
         isLoading = false;
 
         //场景加载完成后事件
         afterSceneLoadedEvent.RaiseEvent();
+    }
+
+    private void EndEvent()
+    {
+        if (currentLoadScene.sceneType == SceneType.Map)
+        {
+            weapon.SetActive(true);
+        }
+        else
+        {
+            weapon.SetActive(false);
+        }
+        if (currentLoadScene.sceneType == SceneType.EndGame)
+        {
+            GameObject[] endPlayer = GameObject.FindGameObjectsWithTag("Player");
+
+            //endPlayer[0].transform.gameObject.SetActive(false);
+            endPlayer[0].GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
+            endPlayer[0].transform.position = new Vector2(1.65f, -0.33f);
+        }
+    }
+
+    private void ReStart()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            Destroy(player);
+        }
+        OnLoadRequestEvent(menuScene);
     }
 }

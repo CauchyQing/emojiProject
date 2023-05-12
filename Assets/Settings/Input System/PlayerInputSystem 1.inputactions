@@ -414,7 +414,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "LEFT",
+                    "name": "changeFace",
                     "type": "Button",
                     "id": "d02ab805-9102-43b9-9143-929d603e638a",
                     "expectedControlType": "Button",
@@ -577,11 +577,11 @@
                 {
                     "name": "",
                     "id": "82627dcc-3b13-4ba9-841d-e4b746d6553e",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "LEFT",
+                    "action": "changeFace",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -620,23 +620,12 @@
                 },
                 {
                     "name": "",
-                    "id": "861c160e-368f-421a-ba67-f3a329446c2a",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "LEFT",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ef4b88fe-87a9-46a4-bf67-936e3ea68aa6",
-                    "path": "<Gamepad>/leftStick/left",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "LEFT",
+                    "action": "changeFace",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -644,6 +633,17 @@
                     "name": "",
                     "id": "fa18db03-4e46-4bda-aaf6-b30e551be8b6",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "changeShoe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2efccbfa-5b69-435d-b33d-c3bf4ed80a09",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

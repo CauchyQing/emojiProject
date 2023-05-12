@@ -818,9 +818,6 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 2112
-  movingPlatformLayer:
-    serializedVersion: 2
-    m_Bits: 2048
   isGround: 0
   isPlatform: 0
   damageMultiplier: 1
@@ -1062,7 +1059,19 @@ MonoBehaviour:
     m_ActionId: cc925a6a-6b58-4e29-88f4-12aa3a8a892a
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7196787824306238943}
+        m_TargetAssemblyTypeName: ArmourController, Assembly-CSharp
+        m_MethodName: NextFace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d02ab805-9102-43b9-9143-929d603e638a
     m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
@@ -1337,7 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  attackForce: 5
+  attackForce: 10
   tf: {fileID: 6716714051726491480}
   parent: {fileID: 0}
   pa: {fileID: 0}
