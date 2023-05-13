@@ -192,6 +192,7 @@ public class SceneLoader : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
+            Debug.Log("123");
             Destroy(player);
         }
         OnLoadRequestEvent(menuScene);
