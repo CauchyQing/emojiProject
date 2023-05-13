@@ -165,7 +165,7 @@ public class ArmourController : MonoBehaviour
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "riot");
             LHand.SetCategoryAndLabel(LHand.GetCategory(), "riot");
         }
-        else if (RHand.GetCategory() != "hand")
+        else if (RHand.GetLabel() != "hand")
         {
             UpdateAnimtorContoller();
             RHand.SetCategoryAndLabel(RHand.GetCategory(), "hand");

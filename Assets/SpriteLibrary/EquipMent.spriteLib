@@ -32,13 +32,28 @@ MonoBehaviour:
       m_Sprite: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -3433011962710160850, guid: 1b99a49b54fda5f45acde4a37c20e9c1, type: 3}
-    - m_Name: liuhan
-      m_Hash: 371173169
+    - m_Name: sweat
+      m_Hash: 724177711
       m_Sprite: {fileID: 3618330454556448840, guid: bc76f193dc324e54f84568c3f9e6f855, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: 3618330454556448840, guid: bc76f193dc324e54f84568c3f9e6f855, type: 3}
+    - m_Name: clown
+      m_Hash: 549428552
+      m_Sprite: {fileID: -5713973884602743653, guid: e5da4f72f96f89648bfb6acb599d4ab4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5713973884602743653, guid: e5da4f72f96f89648bfb6acb599d4ab4, type: 3}
+    - m_Name: laugh
+      m_Hash: 580207494
+      m_Sprite: {fileID: 6454184235582799358, guid: 51ba176c9b3f71b4a8e08212e6cb0fde, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6454184235582799358, guid: 51ba176c9b3f71b4a8e08212e6cb0fde, type: 3}
+    - m_Name: kiss
+      m_Hash: 125523202
+      m_Sprite: {fileID: 3706567296250905644, guid: 96a79d3e74aa59145b5e00709bd91869, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3706567296250905644, guid: 96a79d3e74aa59145b5e00709bd91869, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 4
+    m_EntryOverrideCount: 7
   - m_Name: Weapon
     m_Hash: 782213840
     m_CategoryList: []
@@ -160,5 +175,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638195254994706216
+  m_ModificationHash: 638195707327531632
   m_Version: 1
