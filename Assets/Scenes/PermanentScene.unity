@@ -718,11 +718,13 @@ MonoBehaviour:
   chooseCharacterEvent: {fileID: 11400000, guid: c3f6b37623b23a345aa3b8a858675987, type: 2}
   chooseMapEvent: {fileID: 11400000, guid: 63c17bce32f515b4a9b8d20778e2acf5, type: 2}
   replayEvent: {fileID: 11400000, guid: 184ed758df3c9b847a65a0a359a7dc92, type: 2}
+  developerEvent: {fileID: 11400000, guid: 77126f0e9a825c6459fe93756b1277b6, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 76e01d21d39c3bc4386ac98bc8135ac1, type: 2}
   firstLoadScene: {fileID: 0}
   menuScene: {fileID: 11400000, guid: 120210cc9dd2a5c4d92b39dee4d2bd9e, type: 2}
   chooseCharacterScene: {fileID: 11400000, guid: f8a96a9a41e599241a9e277ca8c90f67, type: 2}
   chooseMapScene: {fileID: 11400000, guid: 3528e7fc102c22d4aa55bd8294ece2bf, type: 2}
+  developerScene: {fileID: 11400000, guid: 5fb0b1c11c3d8614f91ecc8f2c4e817c, type: 2}
   endScene: {fileID: 11400000, guid: 45f0ec00a84ad4340aabcbcb32a8c32c, type: 2}
   canvas: {fileID: 1174339665}
   hintDuration: 2
@@ -1448,7 +1450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 356, y: 443}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959070373
@@ -1498,8 +1500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1534,7 +1536,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -89.49573, y: 0, z: 0, w: 0}
+  m_margin: {x: -570.71564, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
