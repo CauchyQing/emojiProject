@@ -101,6 +101,7 @@ public class SceneLoader : MonoBehaviour
         {
             OnLoadRequestEvent(sceneToLoad);
             generatePlayer.SetActive(true);
+            generatePlayer.GetComponent<PlayerInputManager>().EnableJoining();
         }
         else
             StartCoroutine(FadeHint());

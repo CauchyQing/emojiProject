@@ -41,10 +41,6 @@ public class ArmourController : MonoBehaviour
 
     private void Awake()
     {
-
-    }
-    private void Start()
-    {
         spriteLibrary = GetComponent<SpriteLibrary>();
         playerController = GetComponent<playerController>();
         foreach (var resolver in GetComponentsInChildren<SpriteResolver>())
@@ -73,6 +69,10 @@ public class ArmourController : MonoBehaviour
             }
         }
     }
+    private void Start()
+    {
+
+    }
     public void SetWeapon(string WeaponLabel)
     {
         if (Weapon != null)
@@ -93,7 +93,6 @@ public class ArmourController : MonoBehaviour
                 FaceIndex = 0;
             }
             Face.SetCategoryAndLabel(Face.GetCategory(), FaceLabels[FaceIndex]);
-            Debug.Log("ssssss");
         }
     }
 
