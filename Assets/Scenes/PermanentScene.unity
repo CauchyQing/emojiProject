@@ -322,8 +322,8 @@ MonoBehaviour:
   m_MaximumDistance: 5000
   m_MinimumFOV: 3
   m_MaximumFOV: 60
-  m_MinimumOrthoSize: 8
-  m_MaximumOrthoSize: 5000
+  m_MinimumOrthoSize: 10
+  m_MaximumOrthoSize: 30
 --- !u!114 &460066254
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -718,11 +718,13 @@ MonoBehaviour:
   chooseCharacterEvent: {fileID: 11400000, guid: c3f6b37623b23a345aa3b8a858675987, type: 2}
   chooseMapEvent: {fileID: 11400000, guid: 63c17bce32f515b4a9b8d20778e2acf5, type: 2}
   replayEvent: {fileID: 11400000, guid: 184ed758df3c9b847a65a0a359a7dc92, type: 2}
+  developerEvent: {fileID: 11400000, guid: 77126f0e9a825c6459fe93756b1277b6, type: 2}
   afterSceneLoadedEvent: {fileID: 11400000, guid: 76e01d21d39c3bc4386ac98bc8135ac1, type: 2}
   firstLoadScene: {fileID: 0}
   menuScene: {fileID: 11400000, guid: 120210cc9dd2a5c4d92b39dee4d2bd9e, type: 2}
   chooseCharacterScene: {fileID: 11400000, guid: f8a96a9a41e599241a9e277ca8c90f67, type: 2}
   chooseMapScene: {fileID: 11400000, guid: 3528e7fc102c22d4aa55bd8294ece2bf, type: 2}
+  developerScene: {fileID: 11400000, guid: 5fb0b1c11c3d8614f91ecc8f2c4e817c, type: 2}
   endScene: {fileID: 11400000, guid: 45f0ec00a84ad4340aabcbcb32a8c32c, type: 2}
   canvas: {fileID: 1174339665}
   hintDuration: 2
@@ -1194,7 +1196,7 @@ MonoBehaviour:
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
   m_Transitions:
-    m_BlendHint: 0
+    m_BlendHint: 3
     m_InheritPosition: 0
     m_OnCameraLive:
       m_PersistentCalls:
@@ -1409,13 +1411,29 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: b465bb65-c267-4301-b649-7a03efbea1ee
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2859bd0d-303a-4192-8a2c-68b0faafcceb
+        m_Path: <Gamepad>/buttonSouth
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 5fa3a1ee-8f93-4610-9e40-8d7234f89394
+        m_Path: <Keyboard>/e
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 5620094325498275643, guid: 938ff30c3b938494c8f4e121a2b3a8ab, type: 3}
@@ -1463,7 +1481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 356, y: 443}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959070373
@@ -1513,8 +1531,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1549,7 +1567,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -89.49573, y: 0, z: 0, w: 0}
+  m_margin: {x: -570.71564, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

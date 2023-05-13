@@ -19,6 +19,7 @@ public class SceneLoader : MonoBehaviour
     public VoidEventSO chooseCharacterEvent;
     public VoidEventSO chooseMapEvent;
     public VoidEventSO replayEvent;
+    public VoidEventSO developerEvent;
 
     [Header("¹ã²¥")]
     public VoidEventSO afterSceneLoadedEvent;
@@ -28,9 +29,10 @@ public class SceneLoader : MonoBehaviour
     public GameSceneSO menuScene;
     public GameSceneSO chooseCharacterScene;
     public GameSceneSO chooseMapScene;
+    public GameSceneSO developerScene;
+    public GameSceneSO endScene;
     private GameSceneSO currentLoadScene;
     private GameSceneSO sceneToLoad;
-    public GameSceneSO endScene;
     private bool isLoading;
 
     public Canvas canvas;
@@ -53,7 +55,10 @@ public class SceneLoader : MonoBehaviour
             endPlayers = GameObject.FindGameObjectsWithTag("Player");
             if (endPlayers.Length == 1)
             {
+                endPlayers[0].GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
+                endPlayers[0].transform.position = new Vector2(1.65f, -0.33f);
                 OnLoadRequestEvent(endScene);
+
             }
         }
     }
@@ -66,6 +71,7 @@ public class SceneLoader : MonoBehaviour
         newGameEvent.OnEventRaised += NewGame;
         afterSceneLoadedEvent.OnEventRaised += EndEvent;
         replayEvent.OnEventRaised += ReStart;
+        developerEvent.OnEventRaised += OpenDeveloperScene;
     }
 
     private void OnDisable()
@@ -76,14 +82,24 @@ public class SceneLoader : MonoBehaviour
         newGameEvent.OnEventRaised -= NewGame;
         afterSceneLoadedEvent.OnEventRaised -= EndEvent;
         replayEvent.OnEventRaised -= ReStart;
+        developerEvent.OnEventRaised -= OpenDeveloperScene;
+
+    }
+
+    private void OpenDeveloperScene()
+    {
+        OnLoadRequestEvent(developerScene);
     }
 
     private void ChooseCharacter()
     {
-        generatePlayer.SetActive(true);
+
         sceneToLoad = chooseCharacterScene;
         if (firstLoadScene != null)
+        {
             OnLoadRequestEvent(sceneToLoad);
+            generatePlayer.SetActive(true);
+        }
         else
             StartCoroutine(FadeHint());
     }
@@ -134,8 +150,6 @@ public class SceneLoader : MonoBehaviour
     {
         yield return currentLoadScene.sceneReference.UnLoadScene();
 
-        //playerTrans.gameObject.SetActive(false);
-
         LoadNewScene();
     }
 
@@ -168,14 +182,6 @@ public class SceneLoader : MonoBehaviour
         else
         {
             weapon.SetActive(false);
-        }
-        if (currentLoadScene.sceneType == SceneType.EndGame)
-        {
-            GameObject[] endPlayer = GameObject.FindGameObjectsWithTag("Player");
-
-            //endPlayer[0].transform.gameObject.SetActive(false);
-            endPlayer[0].GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
-            endPlayer[0].transform.position = new Vector2(1.65f, -0.33f);
         }
     }
 

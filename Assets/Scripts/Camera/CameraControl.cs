@@ -30,6 +30,11 @@ public class CameraControl : MonoBehaviour
         afterSceneLoadedEvent.OnEventRaised -= OnAfterSceneLoadedEvent;
     }
 
+    private void FixedUpdate()
+    {
+        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10f, 7.5f), Mathf.Clamp(transform.position.y, -10f, 5.5f), 0);
+    }
+
     private void OnAfterSceneLoadedEvent()
     {
         //GetNewCameraBounds();
