@@ -93,7 +93,7 @@ public class playerAttribution : MonoBehaviour
         }
         else if (s == STATE.ACCUMULATEATTACK && state != STATE.DEFEND)
         {
-            TakeDamageHelp(attacker, (float)(damageMultiplier * 1.5));
+            TakeDamageHelp(attacker, (float)(damageMultiplier * 2));
         }
 
         else if (s == STATE.ACCUMULATEATTACK && state == STATE.DEFEND)
@@ -135,8 +135,6 @@ public class playerAttribution : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-
-
             currentHealth = 0;
             gameObject.layer = LayerMask.NameToLayer("None");
 

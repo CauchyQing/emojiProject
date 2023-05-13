@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bounds
   - Weapon
+  - WeaponManager
   layers:
   - Default
   - TransparentFX

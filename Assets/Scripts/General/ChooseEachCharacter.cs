@@ -34,7 +34,7 @@ public class ChooseEachCharacter : MonoBehaviour
         {
             Debug.Log(t);
             player.transform.position = position;
-            player.transform.GetChild(7).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = RGB[t % 3];
+            player.transform.GetChild(7).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = RGB[t % 4];
             x = x + 3.72f;
             position = new Vector2(x, -1.1f);
             t++;

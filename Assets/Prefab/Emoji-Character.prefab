@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: bf4ce53b8ec627748b05d4f6177eb5ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -820,7 +820,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   rb: {fileID: 0}
   pc: {fileID: 0}
-  health: 100
+  health: 150
   currentHealth: 0
   OnAttack:
     m_PersistentCalls:
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  attackForce: 10
+  attackForce: 12
   tf: {fileID: 6716714051726491480}
   parent: {fileID: 0}
   pa: {fileID: 0}

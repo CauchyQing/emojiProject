@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
+  rgb: {x: 0, y: 0, z: 0}
 --- !u!1 &275815738
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_MinimumFOV: 3
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 10
-  m_MaximumOrthoSize: 30
+  m_MaximumOrthoSize: 40
 --- !u!114 &460066254
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1593,7 +1594,7 @@ GameObject:
   - component: {fileID: 2083843992}
   m_Layer: 0
   m_Name: Weapon Manager
-  m_TagString: Untagged
+  m_TagString: WeaponManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

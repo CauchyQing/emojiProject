@@ -11,7 +11,7 @@ public class WeaponManager : Singleton<WeaponManager>
     [Header("武器掉落")]
     //武器初始位置的范围
     public float minX = -20f;
-    public float maxX = 20f; 
+    public float maxX = 20f;
     public float minY = 30f;
     public float maxY = 40f;
     //场景中同时存在的最大武器数量
@@ -27,16 +27,16 @@ public class WeaponManager : Singleton<WeaponManager>
     protected override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this);
+        // DontDestroyOnLoad(this);
     }
 
     public void InstantiateDropWeapon(string WeaponName, Transform transform)
     {
-        foreach(GameObject prefab in weaponPrefabs)
+        foreach (GameObject prefab in weaponPrefabs)
         {
-            if(prefab.GetComponent<WeaponAttri>().GetWeaponName() == WeaponName)
+            if (prefab.GetComponent<WeaponAttri>().GetWeaponName() == WeaponName)
             {
-                var instance = Instantiate(prefab, transform.position,transform.rotation);
+                var instance = Instantiate(prefab, transform.position, transform.rotation);
                 instance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 500);
                 StartCoroutine(DisableColliderCoroutine(instance));
                 weaponCount++;
@@ -79,7 +79,7 @@ public class WeaponManager : Singleton<WeaponManager>
 
             //在随机位置实例化武器Prefab
             Vector3 position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY));
-            Quaternion rotation = Quaternion.Euler(0,0,0);
+            Quaternion rotation = Quaternion.Euler(0, 0, 0);
             Instantiate(weaponPrefab, position, rotation);
             weaponCount++;
         }
@@ -87,7 +87,7 @@ public class WeaponManager : Singleton<WeaponManager>
 
     public void DecreaseWeaponCount()
     {
-        if (--weaponCount < 0) weaponCount = 0;    
+        if (--weaponCount < 0) weaponCount = 0;
     }
 
     private void Update()

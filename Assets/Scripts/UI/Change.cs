@@ -6,12 +6,27 @@ using UnityEngine.SceneManagement;
 public class Change : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Scene1()
+    public void EndEnd()
     {
-        Debug.Log("该按钮为开始游戏！");
-        SceneManager.LoadScene(1);//可以输入场景序号或者是场景名
-                                        // SceneManager.LoadScene("1");
+        SceneManager.LoadScene("RE");
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("PermanentScene");
+    }
+
+
+    public void OnExitGame()//定义一个退出游戏的方法
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;//如果是在unity编译器中
+#else
+        Application.Quit();//否则在打包文件中
+#endif
+    }
+
+
     public void Scene2()//返回主界面
     {
         Debug.Log("返回主界面");
@@ -27,5 +42,5 @@ public class Change : MonoBehaviour
         Debug.Log("选人界面");
         SceneManager.LoadScene(1);
     }
-   
+
 }

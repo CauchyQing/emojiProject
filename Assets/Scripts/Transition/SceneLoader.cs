@@ -41,6 +41,7 @@ public class SceneLoader : MonoBehaviour
     public GameObject weapon;
     private GameObject[] players;
     private GameObject[] endPlayers;
+    private GameObject[] weaponManager;
     private GameObject endPlayer;
 
     private void Start()
@@ -123,6 +124,13 @@ public class SceneLoader : MonoBehaviour
 
     private void NewGame()
     {
+        weaponManager = GameObject.FindGameObjectsWithTag("WeaponManager");
+        foreach (GameObject weapon in weaponManager)
+        {
+            weapon.transform.SetParent(GameObject.Find("Character").transform);
+        }
+
+
         sceneToLoad = firstLoadScene;
         OnLoadRequestEvent(sceneToLoad);
         players = GameObject.FindGameObjectsWithTag("Player");
