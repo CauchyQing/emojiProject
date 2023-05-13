@@ -8,10 +8,10 @@ public class ChooseEachCharacter : MonoBehaviour
     public Vector2 position;
     public Vector3 rgb;
     private float x;
-   
-    private Color[] RGB  = new Color[4];
 
-   // private Color newColor;
+    private Color[] RGB = new Color[4];
+
+    // private Color newColor;
 
     private void Start()
     {
@@ -23,22 +23,22 @@ public class ChooseEachCharacter : MonoBehaviour
     }
 
 
-        public void ChooseCharacter()
+    public void ChooseCharacter()
     {
         int t = 0;
         x = -5.5f;
         position = new Vector2(x, -1.1f);
         players = GameObject.FindGameObjectsWithTag("Player");
-      
+
         foreach (GameObject player in players)
         {
             Debug.Log(t);
             player.transform.position = position;
-            player.transform.GetChild(7).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color =RGB[t%3];
+            player.transform.GetChild(7).GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = RGB[t % 3];
             x = x + 3.72f;
             position = new Vector2(x, -1.1f);
             t++;
-           
+
         }
     }
 }
