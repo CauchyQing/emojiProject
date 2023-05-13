@@ -55,6 +55,8 @@ public class SceneLoader : MonoBehaviour
             endPlayers = GameObject.FindGameObjectsWithTag("Player");
             if (endPlayers.Length == 1)
             {
+                endPlayers[0].transform.SetParent(GameObject.Find("Character").transform);
+
                 endPlayers[0].GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
                 endPlayers[0].transform.position = new Vector2(1.65f, -0.33f);
                 OnLoadRequestEvent(endScene);
