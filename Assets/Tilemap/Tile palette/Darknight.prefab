@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 971765887179110566}
   - component: {fileID: 799542986882015008}
   m_Layer: 0
-  m_Name: Castle 1
+  m_Name: Darknight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

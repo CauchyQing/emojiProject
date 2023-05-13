@@ -193,9 +193,9 @@ public class playerAttribution : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("OUT MC");
-        gameObject.transform.SetParent(null);
-
-
+        gameObject.transform.SetParent(GameObject.Find("Character").transform);
 
     }
+
+
 }

@@ -24,10 +24,10 @@ public class Spike : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
 
+            
 
 
-
-            if(collision.gameObject.GetComponent<playerController>().faceDirection>0)
+          if(collision.gameObject.GetComponent<playerController>().faceDirection>0)
           collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1, 1) * force , ForceMode2D.Impulse);
             else
            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1, 1) * force, ForceMode2D.Impulse);
