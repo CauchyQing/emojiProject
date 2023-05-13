@@ -42,7 +42,6 @@ public class SceneLoader : MonoBehaviour
     private GameObject[] players;
     private GameObject[] endPlayers;
     private GameObject[] weaponManager;
-    private GameObject endPlayer;
 
     private void Start()
     {
