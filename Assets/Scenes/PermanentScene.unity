@@ -670,6 +670,7 @@ MonoBehaviour:
   BGMEvent: {fileID: 11400000, guid: 0f273956867715d449c4994b9ab70abb, type: 2}
   BGMSource: {fileID: 498405134}
   FXSource: {fileID: 498405135}
+  slider: {fileID: 0}
 --- !u!1 &518818771
 GameObject:
   m_ObjectHideFlags: 0

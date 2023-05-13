@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class AudioManager : MonoBehaviour
     [Header("×é¼þ")]
     public AudioSource BGMSource;
     public AudioSource FXSource;
+    public Slider slider;
 
     private void OnEnable()
     {
@@ -36,5 +38,10 @@ public class AudioManager : MonoBehaviour
     {
         FXSource.clip = clip;
         FXSource.Play();
+    }
+
+    public void Volume()
+    {
+        BGMSource.volume = slider.value;
     }
 }
