@@ -21,7 +21,7 @@ public class Spike : MonoBehaviour
     {
         Debug.Log("spike");
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player")&& collision.gameObject.GetComponent<Rigidbody2D>().velocity.y<=0)
         {
 
             
