@@ -14,7 +14,6 @@ public class AudioManager : MonoBehaviour
     [Header("×é¼þ")]
     public AudioSource BGMSource;
     public AudioSource FXSource;
-    public Slider slider;
 
     private void OnEnable()
     {
@@ -38,10 +37,5 @@ public class AudioManager : MonoBehaviour
     {
         FXSource.clip = clip;
         FXSource.Play();
-    }
-
-    public void Volume()
-    {
-        BGMSource.volume = slider.value;
     }
 }
