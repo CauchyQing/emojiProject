@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.UI;
@@ -138,13 +137,12 @@ public class playerAttribution : MonoBehaviour
             currentHealth = 0;
             gameObject.layer = LayerMask.NameToLayer("None");
 
-            //Ondie?.Invoke();
             rb.AddForce(5 * transform.up * attacker.attackForce * x, ForceMode2D.Impulse);
             anim.PlayerHurt();
             if (attacker.tf.position.x < transform.position.x)
-                rb.AddForce(transform.right * attacker.attackForce * 20 * x, ForceMode2D.Impulse);
+                rb.AddForce(transform.right * attacker.attackForce * 7 * x, ForceMode2D.Impulse);
             else
-                rb.AddForce(-1 * transform.right * attacker.attackForce * 20 * x, ForceMode2D.Impulse);
+                rb.AddForce(-1 * transform.right * attacker.attackForce * 7 * x, ForceMode2D.Impulse);
 
         }
         else

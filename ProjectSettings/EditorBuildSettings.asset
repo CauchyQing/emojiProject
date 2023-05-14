@@ -5,20 +5,35 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Playerground/Red Gate.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/GUI/Start.unity
-    guid: 197a6d45b37983f44be2098d3649fe55
-  - enabled: 0
-    path: Assets/Scripts/PermanentScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Initial.unity
+    guid: 273e97149736a75439e3aed1369de9eb
+  - enabled: 1
+    path: Assets/Scenes/PermanentScene.unity
     guid: ca17a7e4458299f4aabdae9772ee9cef
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GUI/Develop.unity
     guid: 4770f02d4b809ed458be1e3aa82d79ce
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/GUI/Start.unity
+    guid: 197a6d45b37983f44be2098d3649fe55
+  - enabled: 1
     path: Assets/Scenes/GUI/ChooseCharacter.unity
     guid: 2554fd1f4a45e3e4c91de6eea529f9bc
+  - enabled: 1
+    path: Assets/Scenes/GUI/ChooseMap.unity
+    guid: 920f355dab4d8d34b899413970227d88
+  - enabled: 1
+    path: Assets/Scenes/Playerground/Red Gate.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/GUI/ENDScenario.unity
+    guid: 987e6042e0d66e44ba3936576d619188
+  - enabled: 1
+    path: Assets/Scenes/GUI/RE.unity
+    guid: 0ff82214be4a8ad428b4a95e3ddd73ad
+  - enabled: 1
+    path: Assets/Scenes/Playerground/Castle.unity
+    guid: c4ba9b21b2f26ef4e917e45d1482f7a0
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 64f77ea7d37a164488ff816962224ef6, type: 2}

@@ -124,15 +124,14 @@ public class SceneLoader : MonoBehaviour
     private void NewGame()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject player in players)
-        {
-            player.GetComponent<PlayerInput>().SwitchCurrentActionMap("GamePlay");
-        }
-        Debug.Log(players.Length);
         if (players.Length > 1)
         {
             sceneToLoad = firstLoadScene;
             OnLoadRequestEvent(sceneToLoad);
+            foreach (GameObject player in players)
+            {
+                player.GetComponent<PlayerInput>().SwitchCurrentActionMap("GamePlay");
+            }
             generatePlayer.SetActive(false);
         }
     }

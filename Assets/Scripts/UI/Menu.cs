@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour
     public GameObject PauseMenu;
     public AudioMixer audioMixer;
     // Start is called before the first frame update
- 
+
     public void PausePress()
     {
         PauseMenu.SetActive(true);
