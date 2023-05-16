@@ -23,8 +23,3 @@ Asset：
 命名规范：
 1、文件、函数名及组件的名字用英文全称命名，尽量简洁，比如普通攻击：AccumulatedAttack
 2、script里面的变量单词第一个小写，之后的单词首字母大写，如isGround
-
-clone项目的时候会新建一个场景，点一个已经存在的场景，不要保存那个untitle
-
-里面IsNotEmpty.cs文件是占位的，空文件夹上传不了
-
